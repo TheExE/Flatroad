@@ -34,18 +34,21 @@ bool HelloWorld::init()
 	playerCharacter = Sprite::create();
 	Sprite* characterSpriteSheet = Sprite::create("Assets/Graphics/Player/player-move.png");
 	Vector<SpriteFrame*> wizardFrames;
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(0, 0, 32, 32)));
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(32, 0, 32, 32)));
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(64, 0, 32, 32)));
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(96, 0, 32, 32)));
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(128, 0, 32, 32)));
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(160, 0, 32, 32)));
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(192, 0, 32, 32)));
-	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(224, 0, 32, 32)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(0, 0, 64, 64)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(64, 0, 64, 64)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(128, 0, 64, 64)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(192, 0, 64, 64)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(256, 0, 64, 64)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(320, 0, 64, 64)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(384, 0, 64, 64)));
+	wizardFrames.pushBack(SpriteFrame::createWithTexture(characterSpriteSheet->getTexture(), Rect(448, 0, 64, 64)));
 	Animation* animation = Animation::createWithSpriteFrames(wizardFrames, 0.1);
 	Animate* animate = Animate::create(animation);
 	playerCharacter->runAction(RepeatForever::create(animate));
-	playerCharacter->setPosition(500, 300);
+	playerCharacter->setAnchorPoint(Vec2(0.5, 0.5));
+	playerCharacter->setPosition(200, 300);
+	Camera* defaultCam = Camera::getDefaultCamera();
+	defaultCam->setPosition(playerCharacter->getPosition());
 
 	auto rootNode = CSLoader::createNode("MainScene.csb");
 	rootNode->addChild(playerCharacter);
@@ -75,17 +78,36 @@ void HelloWorld::OnTouchEnded(Touch* touch, Event* event)
 }
 void HelloWorld::OnMouseDown(cocos2d::Event* event)
 {
-	EventMouse* e = (EventMouse*)event;
-	Vec2 clickPos = convertToWorldSpace(e->getLocation());
-	clickPos.y = this->getContentSize().height - clickPos.y;
-	float distanceToTravel = playerCharacter->getPosition().distance(clickPos);
-	auto move = MoveTo::create(distanceToTravel/25, clickPos);
-	playerCharacter->runAction(move);
-	
-	auto move = MoveTo::create(distanceToTravel / 25, clickPos);
-	playerCharacter->runAction(move);
-	auto cam = Camera::getDefaultCamera();
-	cam->runAction(move);
+	if (playerCharacter->numberOfRunningActions() < 5)
+	{
+		// Invert y because it is different between world space and screen space
+		EventMouse* e = (EventMouse*)event;
+		Vec2 clickPos = e->getLocation();
+		clickPos.y = Director::getInstance()->getOpenGLView()->getFrameSize().height - clickPos.y;
+		
+		// Move character
+		Vec2 clickInWorld = convertToWorldSpace(clickPos);
+		float distanceToTravel = playerCharacter->getPosition().distance(clickInWorld);
+		auto move = MoveTo::create(distanceToTravel / 50, clickInWorld);
+		float rotateAngle = Vec2::angle(GetSpriteHeading(playerCharacter),
+			clickInWorld - playerCharacter->getPosition()) * 180/ 3.14159265359;
+		playerCharacter->runAction(move);
+		playerCharacter->setRotation(rotateAngle);
 
-	// TODO: Need to move camera and make player stick to center of the screen
+		// Move camera
+		Camera* cam = Camera::getDefaultCamera();
+		Action* moveCamera = MoveTo::create(distanceToTravel / 50, Vec3(clickInWorld.x, clickInWorld.y,
+			cam->getPosition3D().z));
+		cam->runAction(moveCamera);
+
+		std::stringstream s;
+		s << "Angle: " << rotateAngle;
+		cocos2d::log(s.str().c_str());
+	}
+}
+
+Vec2 HelloWorld::GetSpriteHeading(Sprite* sprite)
+{
+	float rotationRad = sprite->getRotation() * 3.14159265359 / 180;
+	return Vec2(cos(rotationRad), sin(rotationRad));
 }

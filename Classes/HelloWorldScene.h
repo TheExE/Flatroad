@@ -21,6 +21,9 @@ public:
 private:
 	cocos2d::Sprite* playerCharacter;
 	cocos2d::Label* touchInfo;
+
+private:
+	cocos2d::Vec2 GetSpriteHeading(cocos2d::Sprite* sprite);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
