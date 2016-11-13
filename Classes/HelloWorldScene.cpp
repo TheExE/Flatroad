@@ -1,6 +1,7 @@
 #include "HelloWorldScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
+#include "GameConsts.h"
 
 USING_NS_CC;
 
@@ -46,9 +47,7 @@ bool HelloWorld::init()
 	Animate* animate = Animate::create(animation);
 	playerCharacter->runAction(RepeatForever::create(animate));
 	playerCharacter->setAnchorPoint(Vec2(0.5, 0.5));
-	playerCharacter->setPosition(200, 300);
-	Camera* defaultCam = Camera::getDefaultCamera();
-	defaultCam->setPosition(playerCharacter->getPosition());
+	playerCharacter->setPosition(0, 0);
 
 	auto rootNode = CSLoader::createNode("MainScene.csb");
 	rootNode->addChild(playerCharacter);
@@ -70,44 +69,46 @@ bool HelloWorld::init()
 
 void HelloWorld::OnTouchEnded(Touch* touch, Event* event)
 {
-	Vec2 touchPos = convertToWorldSpace(touch->getLocation());
-	touchPos.y = this->getContentSize().height - touchPos.y;
-	float distanceToTravel = playerCharacter->getPosition().distance(touchPos);
-	auto move = MoveTo::create(distanceToTravel / 15, touchPos);
-	playerCharacter->runAction(move);
 }
 void HelloWorld::OnMouseDown(cocos2d::Event* event)
 {
 	if (playerCharacter->numberOfRunningActions() < 5)
 	{
-		// Invert y because it is different between world space and screen space
 		EventMouse* e = (EventMouse*)event;
 		Vec2 clickPos = e->getLocation();
-		clickPos.y = Director::getInstance()->getOpenGLView()->getFrameSize().height - clickPos.y;
 		
 		// Move character
+		
 		Vec2 clickInWorld = convertToWorldSpace(clickPos);
 		float distanceToTravel = playerCharacter->getPosition().distance(clickInWorld);
-		auto move = MoveTo::create(distanceToTravel / 50, clickInWorld);
+		float movementSpeed = distanceToTravel / 50;
+		auto move = MoveTo::create(movementSpeed, clickInWorld);
 		float rotateAngle = Vec2::angle(GetSpriteHeading(playerCharacter),
-			clickInWorld - playerCharacter->getPosition()) * 180/ 3.14159265359;
+			clickInWorld - playerCharacter->getPosition()) * 180/ PI;
 		playerCharacter->runAction(move);
 		playerCharacter->setRotation(rotateAngle);
 
 		// Move camera
 		Camera* cam = Camera::getDefaultCamera();
-		Action* moveCamera = MoveTo::create(distanceToTravel / 50, Vec3(clickInWorld.x, clickInWorld.y,
+		Action* moveCamera = MoveTo::create(movementSpeed, Vec3(clickInWorld.x, clickInWorld.y,
 			cam->getPosition3D().z));
 		cam->runAction(moveCamera);
 
 		std::stringstream s;
-		s << "Angle: " << rotateAngle;
+		s << "Angle:  " << rotateAngle << std::endl;
 		cocos2d::log(s.str().c_str());
+		s.clear();
+		s << "Player position x: " << playerCharacter->getPosition().x << " y: " << playerCharacter->getPosition().y << std::endl;
+		cocos2d::log(s.str().c_str());
+		s.clear();
+		s << "Click in world position x: " << clickInWorld.x << " y: " << clickInWorld.y << std::endl;
+		cocos2d::log(s.str().c_str());
+		s.clear();
 	}
 }
 
 Vec2 HelloWorld::GetSpriteHeading(Sprite* sprite)
 {
-	float rotationRad = sprite->getRotation() * 3.14159265359 / 180;
+	float rotationRad = sprite->getRotation() * PI / 180;
 	return Vec2(cos(rotationRad), sin(rotationRad));
 }
