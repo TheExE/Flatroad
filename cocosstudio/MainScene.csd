@@ -6,13 +6,13 @@
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
         <Size X="800.0000" Y="480.0000" />
         <Children>
-          <AbstractNodeData Name="Constantinapole" ActionTag="221539029" Tag="2" IconVisible="False" LeftMargin="-894.0005" RightMargin="-1505.9995" TopMargin="-1437.0063" BottomMargin="-1282.9937" ctype="GameMapObjectData">
+          <AbstractNodeData Name="Constantinapole" ActionTag="221539029" Tag="2" IconVisible="False" RightMargin="-2400.0000" TopMargin="-2720.0000" ctype="GameMapObjectData">
             <Size X="3200.0000" Y="3200.0000" />
             <AnchorPoint />
-            <Position X="-894.0005" Y="-1282.9937" />
+            <Position />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="-1.1175" Y="-2.6729" />
+            <PrePosition />
             <PreSize X="4.0000" Y="6.6667" />
             <FileData Type="Normal" Path="constantinapole.tmx" Plist="" />
           </AbstractNodeData>

@@ -20,7 +20,7 @@ public:
 
 private:
 	cocos2d::Sprite* playerCharacter;
-	cocos2d::Label* touchInfo;
+	cocos2d::Vec2 GetTouchInWorldPosition(cocos2d::Vec2 screenPos);
 
 private:
 	cocos2d::Vec2 GetSpriteHeading(cocos2d::Sprite* sprite);
