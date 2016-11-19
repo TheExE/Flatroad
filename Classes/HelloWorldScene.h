@@ -2,6 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Actors/ActorFactory.h"
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -14,16 +15,14 @@ public:
 
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+	
+	cocos2d::Node* getRootNode();
+	void addEventListenerWithSceneGraphPriority(cocos2d::EventListener* listener);
 
-	void OnTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
-	void OnMouseDown(cocos2d::Event* event);
-
-private:
-	cocos2d::Sprite* playerCharacter;
-	cocos2d::Vec2 GetTouchInWorldPosition(cocos2d::Vec2 screenPos);
 
 private:
-	cocos2d::Vec2 GetSpriteHeading(cocos2d::Sprite* sprite);
+	ActorFactory mActorFactory;
+	cocos2d::Node* pRootNode;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

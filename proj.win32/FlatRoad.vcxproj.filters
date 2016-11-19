@@ -10,38 +10,110 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Headers">
+      <UniqueIdentifier>{8de331c7-2b75-496b-8958-8801b888674f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources">
+      <UniqueIdentifier>{11281ed7-679d-47be-84e5-bc99c9ae8154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Headers\Actors">
+      <UniqueIdentifier>{8d3ab34b-b7fa-4ad6-951c-c325d0fa20e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Headers\Characters">
+      <UniqueIdentifier>{70f1b69d-f5c7-4483-adc9-9c74ec6fcf9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources\Characters">
+      <UniqueIdentifier>{4509ec8f-3c29-415e-a000-31b9083ee34d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources\Actors">
+      <UniqueIdentifier>{c054e4da-532b-4b21-8000-0102b47f23f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Headers\Utils">
+      <UniqueIdentifier>{f937d86a-c391-42e4-86ec-8afb4b9f83ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources\Utils">
+      <UniqueIdentifier>{bd7f084c-adbf-40a6-ab57-228534965d79}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
+      <Filter>src\Sources</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
+      <Filter>src\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Actors\ActorComponent.cpp">
+      <Filter>src\Sources\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Actors\ActorFactory.cpp">
+      <Filter>src\Sources\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Character.cpp">
+      <Filter>src\Sources\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Actors\Actor.cpp">
+      <Filter>src\Sources\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Actors\CharAnimationComponent.cpp">
+      <Filter>src\Sources\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\HashString.cpp">
+      <Filter>src\Sources\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Actors\SpriteComponent.cpp">
+      <Filter>src\Sources\Actors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
+      <Filter>src\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="GameConsts.h">
-      <Filter>src</Filter>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\GameConsts.h">
-      <Filter>src</Filter>
+    <ClInclude Include="..\Classes\Actors\Actor.h">
+      <Filter>src\Headers\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Actors\ActorComponent.h">
+      <Filter>src\Headers\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Character.h">
+      <Filter>src\Headers\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Actors\ActorFactory.h">
+      <Filter>src\Headers\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Actors\CharAnimationComponent.h">
+      <Filter>src\Headers\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Actors\IAnimationComponent.h">
+      <Filter>src\Headers\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameStandart.h">
+      <Filter>src\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\HashString.h">
+      <Filter>src\Headers\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Actors\IDrawComponent.h">
+      <Filter>src\Headers\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Actors\SpriteComponent.h">
+      <Filter>src\Headers\Actors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
