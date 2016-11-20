@@ -2,7 +2,8 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
-#include "Actors/ActorFactory.h"
+
+class Character;
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -21,8 +22,11 @@ public:
 
 
 private:
-	ActorFactory mActorFactory;
 	cocos2d::Node* pRootNode;
+	std::shared_ptr<Character> wizardChar;
+
+private:
+	void spliceSpriteSheet(cocos2d::Sprite* spriteSheetToSplice, cocos2d::String baseName, int cubeSize);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

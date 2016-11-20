@@ -1,7 +1,8 @@
 #include "HelloWorldScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
-#include "GameStandart.h"
+#include "Character/Character.h"
+
 
 USING_NS_CC;
 
@@ -32,8 +33,13 @@ bool HelloWorld::init()
 	}
 
 	pRootNode = CSLoader::createNode("MainScene.csb");
+	wizardChar.reset(new Character());
+	if (!wizardChar->init("Assets/CharacterDefs/WizardCharacter.xml", this))
+	{
+		cocos2d::log("HelloWorldScene: %s", "Failed to initialize wiz character !");
+	}
 	addChild(pRootNode);
-	mActorFactory.createActor("Assets/ActorDefs/WizardActor.xml", this);
+	pRootNode->addChild(wizardChar.get());
 
 	return true;
 }

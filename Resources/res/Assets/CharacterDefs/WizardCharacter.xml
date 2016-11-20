@@ -1,0 +1,10 @@
+<WizardActor>
+	<WalkAnim>
+		<SpriteSheetSoruce>Assets/Graphics/Player/player-move-anim.png</SpriteSheetSoruce>
+		<SpriteSheetPlistSource>Assets/Graphics/Player/PlayerMove/player-move-anim.plist</SpriteSheetPlistSource>
+	</WalkAnim>
+	<SpriteFrame>
+		<Source>Assets/Graphics/Player/player-idle.png</Source>
+		<Rect>[0,0,64,64]</Rect>
+	</SpriteFrame>
+</WizardActor>
