@@ -24,9 +24,6 @@ public:
 private:
 	cocos2d::Node* pRootNode;
 	std::shared_ptr<Character> wizardChar;
-
-private:
-	void spliceSpriteSheet(cocos2d::Sprite* spriteSheetToSplice, cocos2d::String baseName, int cubeSize);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

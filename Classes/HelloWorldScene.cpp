@@ -34,12 +34,13 @@ bool HelloWorld::init()
 
 	pRootNode = CSLoader::createNode("MainScene.csb");
 	wizardChar.reset(new Character());
-	if (!wizardChar->init("Assets/CharacterDefs/WizardCharacter.xml", this))
+	if (!wizardChar->init("Assets/CharacterDefs/WizardCharacter.xml"))
 	{
 		cocos2d::log("HelloWorldScene: %s", "Failed to initialize wiz character !");
 	}
 	addChild(pRootNode);
 	pRootNode->addChild(wizardChar.get());
+
 
 	return true;
 }

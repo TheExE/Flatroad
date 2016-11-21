@@ -11,11 +11,10 @@ public:
 	Character();
 	~Character();
 	
-	bool init(const char* pathToXML, HelloWorld* pGame);
+	bool init(const char* pathToXML);
 
 private:
-	HelloWorld* m_pGame;
-	cocos2d::SpriteFrame* mBaseSpriteFrame;
+	std::string mBaseSpriteFrameName;
 	cocos2d::SpriteBatchNode* mWalkSpritebatch;
 	cocos2d::Vector<cocos2d::SpriteFrame*> mWalkFrames;
 
@@ -26,10 +25,8 @@ private:
 	// Utils
 	cocos2d::Vec2 getSpriteHeading(cocos2d::Sprite* sprite);
 	cocos2d::Vec2 getTouchInWorldPosition(cocos2d::Vec2 screenPos);
-	std::vector<float> stringToVector(cocos2d::String str);
 
 	// Event responders
-	void onMouseDown(cocos2d::Event* event);
-	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
+	void onStartMoving(cocos2d::Vec2 clickScreenPos);
 	void onCharacterMoveFinished();
 };

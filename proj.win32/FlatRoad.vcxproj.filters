@@ -22,6 +22,24 @@
     <Filter Include="src\Sources\Characters">
       <UniqueIdentifier>{4509ec8f-3c29-415e-a000-31b9083ee34d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Headers\Input">
+      <UniqueIdentifier>{1531da8e-b270-46c6-b72e-c378b37fc357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources\Input">
+      <UniqueIdentifier>{62cc6f5a-66b0-404f-99b3-3e227511f287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Headers\HUD">
+      <UniqueIdentifier>{986a4187-c13c-4842-b423-022101f92520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources\HUD">
+      <UniqueIdentifier>{1ffaee4f-3f06-4c5e-bc01-43732e8bba92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Headers\Utils">
+      <UniqueIdentifier>{2a2aaf41-4994-4d2d-9d42-a41e39bdf1c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources\Utils">
+      <UniqueIdentifier>{e18648f2-b8ee-46f6-90fc-a7a72e430300}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,6 +53,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Character\Character.cpp">
       <Filter>src\Sources\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Input\InputManager.cpp">
+      <Filter>src\Sources\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HUD\CharacterHUD.cpp">
+      <Filter>src\Sources\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\Utils.cpp">
+      <Filter>src\Sources\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +79,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Character\Character.h">
       <Filter>src\Headers\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Input\InputManager.h">
+      <Filter>src\Headers\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HUD\CharacterHUD.h">
+      <Filter>src\Headers\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\Utils.h">
+      <Filter>src\Headers\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
