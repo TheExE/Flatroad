@@ -12,6 +12,7 @@ public:
 	~Character();
 	
 	bool init(const char* pathToXML);
+	void onStartMoving(cocos2d::Vec2 clickScreenPos);
 
 private:
 	std::string mBaseSpriteFrameName;
@@ -22,11 +23,8 @@ private:
 	// Inits
 	void initGraphics(const char* pathToXML);
 	
-	// Utils
+
 	cocos2d::Vec2 getSpriteHeading(cocos2d::Sprite* sprite);
 	cocos2d::Vec2 getTouchInWorldPosition(cocos2d::Vec2 screenPos);
-
-	// Event responders
-	void onStartMoving(cocos2d::Vec2 clickScreenPos);
-	void onCharacterMoveFinished();
+	void onCharacterMoveFinished();	
 };

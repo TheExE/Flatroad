@@ -4,6 +4,8 @@
 #include "cocos2d.h"
 
 class Character;
+class InputManager;
+class CameraController;
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -17,13 +19,18 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 	
+	void update(float deltaTime) override;
+
 	cocos2d::Node* getRootNode();
 	void addEventListenerWithSceneGraphPriority(cocos2d::EventListener* listener);
+	void notifyCurCharacterAboutInput(cocos2d::Vec2 screenPosInput);
 
 
 private:
 	cocos2d::Node* pRootNode;
-	std::shared_ptr<Character> wizardChar;
+	std::shared_ptr<Character> m_pWizardChar;
+	std::shared_ptr<InputManager>  m_pInputManager;
+	std::shared_ptr<CameraController> m_pCameraController;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

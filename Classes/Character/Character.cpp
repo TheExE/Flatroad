@@ -125,6 +125,10 @@ void Character::onStartMoving(cocos2d::Vec2 clickScreenPos)
 	Sequence* sequence = cocos2d::Sequence::create(allActions);
 	runAction(sequence);
 
+	// Move camera
+	Camera* defaultCamera = Camera::getDefaultCamera();
+	defaultCamera->setPosition3D(Vec3(getPositionX(), getPositionY(), defaultCamera->getPosition3D().z));
+
 	// Make character face the movement direction
 	setRotation(rotateAngle);
 

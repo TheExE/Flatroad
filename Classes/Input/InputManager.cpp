@@ -3,8 +3,18 @@
 
 using namespace cocos2d;
 
+InputManager::InputManager()
+{
+
+}
+InputManager::~InputManager()
+{
+
+}
 bool InputManager::init(HelloWorld* pGame)
 {
+	this->pGame = pGame;
+
 	// Set up input listeners
 	auto toucheListener = EventListenerTouchOneByOne::create();
 	auto mouseListener = EventListenerMouse::create();
@@ -18,11 +28,10 @@ bool InputManager::init(HelloWorld* pGame)
 
 void InputManager::onMouseDown(Event* event)
 {
-	// Cauculate new position and rotation
-	EventMouse* e = (EventMouse*)event;
-	
+	pGame->notifyCurCharacterAboutInput(((EventMouse*)event)->getLocationInView());
 }
 
 void InputManager::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 {
+	pGame->notifyCurCharacterAboutInput(touch->getLocationInView());
 }

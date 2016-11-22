@@ -12,6 +12,9 @@ public:
 	bool init(HelloWorld* pGame);
 
 private:
+	HelloWorld* pGame;
+
+private:
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onMouseDown(cocos2d::Event* event);
 };

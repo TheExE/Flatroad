@@ -2,7 +2,8 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "Character/Character.h"
-
+#include "Input/InputManager.h"
+#include "Camera/CameraController.h"
 
 USING_NS_CC;
 
@@ -33,18 +34,38 @@ bool HelloWorld::init()
 	}
 
 	pRootNode = CSLoader::createNode("MainScene.csb");
-	wizardChar.reset(new Character());
-	if (!wizardChar->init("Assets/CharacterDefs/WizardCharacter.xml"))
+	m_pWizardChar.reset(new Character());
+	if (!m_pWizardChar->init("Assets/CharacterDefs/WizardCharacter.xml"))
 	{
 		cocos2d::log("HelloWorldScene: %s", "Failed to initialize wiz character !");
 	}
+	m_pInputManager.reset(new InputManager());
+	if (!m_pInputManager->init(this))
+	{
+		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
+	}
+	/*m_pCameraController.reset(new CameraController());
+	if(!m_pCameraController->init(Camera::getDefaultCamera(), m_pWizardChar.get()))
+	{
+		cocos2d::log("HelloWorldScene: Failed to initialize Camera controller !");
+	}*/
+	
+	
 	addChild(pRootNode);
-	pRootNode->addChild(wizardChar.get());
+	pRootNode->addChild(m_pWizardChar.get());
 
 
 	return true;
 }
+void HelloWorld::update(float deltaTime)
+{
+	//m_pCameraController->update();
+}
 
+void HelloWorld::notifyCurCharacterAboutInput(cocos2d::Vec2 screenPosInput)
+{
+	m_pWizardChar->onStartMoving(screenPosInput);
+}
 Node* HelloWorld::getRootNode()
 {
 	return pRootNode;
