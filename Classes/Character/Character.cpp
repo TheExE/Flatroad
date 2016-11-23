@@ -5,12 +5,6 @@
 
 using namespace cocos2d;
 
-Character::Character()
-{
-}
-Character::~Character()
-{
-}
 bool Character::init(const char* pathToXML)
 {
 	initGraphics(pathToXML);
@@ -27,7 +21,7 @@ void Character::initGraphics(const char* pathToXML)
 	tinyxml2::XMLError err =  doc.LoadFile((absPath + pathToXML).c_str());
 	if (err)
 	{
-		cocos2d::log("File not found: %s", pathToXML);
+		cocos2d::log("Character: XML file not found: %s", pathToXML);
 	}
 	tinyxml2::XMLNode* pData = doc.RootElement();
 
@@ -76,20 +70,9 @@ Vec2 Character::getSpriteHeading(Sprite* sprite)
 	float rotationRad = sprite->getRotation() * PI / 180;
 	return Vec2(playerPos.x + (rotationRad), playerPos.y + (rotationRad));
 }
-Vec2 Character::getTouchInWorldPosition(Vec2 screenPos)
-{
-	Vec2 playerCharPos = getPosition();
-	return Vec2(playerCharPos.x + (screenPos.x - (SCREEN_WIDTH / 2)),
-		playerCharPos.y + ((screenPos.y - (SCREEN_HEIGHT / 2)) * (-1)));
-}
-void Character::onStartMoving(cocos2d::Vec2 clickScreenPos)
-{
-	Vec2 clickInWorld = getTouchInWorldPosition(clickScreenPos);
-	float distanceToTravel = getPosition().distance(clickInWorld);
-	float movementSpeed = distanceToTravel / 50;
-	FiniteTimeAction* move = MoveTo::create(movementSpeed, clickInWorld);
-	move->setTag(MOVE_ACTION_TAG);
 
+void Character::onStartMoving(cocos2d::Vec2 clickInWorld, float movementSpeed)
+{
 	Vec2 forward(0, 1);
 	Vec2 toClickInWorldPos = clickInWorld - getPosition();
 	Vec2 right(1, 0);
@@ -105,38 +88,45 @@ void Character::onStartMoving(cocos2d::Vec2 clickScreenPos)
 	}
 
 	/*
-	Since angle uses dot product it only can show angles up to 180 degrees
-	this is why we use another dot product to determine the direction of rotation.
-	And we determine the direction of rotation by peforming dot product on vector
-	to the right of the character and vector from character  to click in world space.
-	If dot product is positive then both vectors are on same side in this case to the right
-	of the character, but if the dot product is negative then the vectors are on different
-	sides in this case one is on right side and the other on left. This is how we can
-	distinguish between rotation directions.
+		Since angle uses dot product it only can show angles up to 180 degrees
+		this is why we use another dot product to determine the direction of rotation.
+		And we determine the direction of rotation by peforming dot product on vector
+		to the right of the character and vector from character  to click in world space.
+		If dot product is positive then both vectors are on same side in this case to the right
+		of the character, but if the dot product is negative then the vectors are on different
+		sides in this case one is on right side and the other on left. This is how we can
+		distinguish between rotation directions.
 	*/
 
-	float rotateAngle = Vec2::angle(forward, toClickInWorldPos) * 180 / PI * sign;
-
 	// Move character and call function once movement is finished
+	FiniteTimeAction* move = MoveTo::create(movementSpeed, clickInWorld);
 	auto moveCallBack = CallFuncN::create(CC_CALLBACK_0(Character::onCharacterMoveFinished, this));
 	cocos2d::Vector<FiniteTimeAction*> allActions;
 	allActions.pushBack(move);
 	allActions.pushBack(moveCallBack);
 	Sequence* sequence = cocos2d::Sequence::create(allActions);
+	sequence->setTag(MOVE_ACTION_TAG);
+
+	// First we stop any already runing actions
+	stopActionByTag(MOVE_ACTION_TAG);
+	
+	// Then we start the new action
 	runAction(sequence);
 
-	// Move camera
-	Camera* defaultCamera = Camera::getDefaultCamera();
-	defaultCamera->setPosition3D(Vec3(getPositionX(), getPositionY(), defaultCamera->getPosition3D().z));
-
 	// Make character face the movement direction
+	float rotateAngle = Vec2::angle(forward, toClickInWorldPos) * 180 / PI * sign;
 	setRotation(rotateAngle);
 
-	// Start animation
+	// Start character animation
 	auto animation = Animation::createWithSpriteFrames(mWalkFrames, 0.1f);
 	auto animate = Animate::create(animation);
 	auto repeatAction = RepeatForever::create(animate);
 	repeatAction->setTag(WALK_ANIM_TAG);
+	
+	// remove any old anim action
+	stopActionByTag(WALK_ANIM_TAG);
+	
+	// start new anim
 	runAction(repeatAction);
 }
 void Character::onCharacterMoveFinished()

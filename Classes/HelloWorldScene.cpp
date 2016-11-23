@@ -4,6 +4,7 @@
 #include "Character/Character.h"
 #include "Input/InputManager.h"
 #include "Camera/CameraController.h"
+#include "GameStandart.h"
 
 USING_NS_CC;
 
@@ -44,11 +45,11 @@ bool HelloWorld::init()
 	{
 		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
 	}
-	/*m_pCameraController.reset(new CameraController());
+	m_pCameraController.reset(new CameraController());
 	if(!m_pCameraController->init(Camera::getDefaultCamera(), m_pWizardChar.get()))
 	{
 		cocos2d::log("HelloWorldScene: Failed to initialize Camera controller !");
-	}*/
+	}
 	
 	
 	addChild(pRootNode);
@@ -57,14 +58,18 @@ bool HelloWorld::init()
 
 	return true;
 }
-void HelloWorld::update(float deltaTime)
-{
-	//m_pCameraController->update();
-}
 
-void HelloWorld::notifyCurCharacterAboutInput(cocos2d::Vec2 screenPosInput)
+void HelloWorld::update(float deltaTime) {}
+void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
 {
-	m_pWizardChar->onStartMoving(screenPosInput);
+	// Cauculate move speed
+	Vec2 clickInWorld = screenPositionToWorldPosition(screenPosInput);
+	float distanceToTravel = getPosition().distance(clickInWorld);
+	float movementSpeed = distanceToTravel / CHARACTER_MOVE_SPEED;
+
+	// Inform character and camera to move
+	m_pWizardChar->onStartMoving(clickInWorld, movementSpeed);
+	m_pCameraController->moveCameraTo(clickInWorld, movementSpeed);
 }
 Node* HelloWorld::getRootNode()
 {
@@ -73,4 +78,10 @@ Node* HelloWorld::getRootNode()
 void HelloWorld::addEventListenerWithSceneGraphPriority(EventListener* listener)
 {
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+}
+Vec2 HelloWorld::screenPositionToWorldPosition(cocos2d::Vec2 screenPosition)
+{
+	Vec2 playerCharPos = m_pWizardChar->getPosition();
+	return Vec2(playerCharPos.x + (screenPosition.x - (SCREEN_WIDTH / 2)),
+		playerCharPos.y + ((screenPosition.y - (SCREEN_HEIGHT / 2)) * (-1)));
 }

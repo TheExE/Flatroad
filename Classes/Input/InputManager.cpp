@@ -28,10 +28,10 @@ bool InputManager::init(HelloWorld* pGame)
 
 void InputManager::onMouseDown(Event* event)
 {
-	pGame->notifyCurCharacterAboutInput(((EventMouse*)event)->getLocationInView());
+	pGame->receiveInput(((EventMouse*)event)->getLocation());
 }
 
 void InputManager::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-	pGame->notifyCurCharacterAboutInput(touch->getLocationInView());
+	pGame->receiveInput(touch->getLocation());
 }

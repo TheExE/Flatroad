@@ -1,19 +1,24 @@
 #include "CameraController.h"
 #include "../Character/Character.h"
+#include "../GameStandart.h"
 
 using namespace cocos2d;
 
 bool CameraController::init(Camera* pMainCamera, Character* pCurCharacter)
 {
-	m_pMainCamera = pMainCamera;
 	m_pCurCharacter = pCurCharacter;
-	mCameraZCoord = pMainCamera->getPosition3D().z;
-
 	return true;
 }
-
-void CameraController::update()
+void CameraController::moveCameraTo(cocos2d::Vec2 worldPosition, float movementSpeed)
 {
-	Vec2 charPosition = m_pCurCharacter->getPosition();
-	m_pCurCharacter->setPosition3D(Vec3(charPosition.x, charPosition.y, mCameraZCoord));
+	// Move camera to input position
+	Camera* defaultCamera = Camera::getDefaultCamera();
+	Vec3 cameraPosition = defaultCamera->getPosition3D();
+	Action* moveCamera = MoveTo::create(movementSpeed, Vec3(worldPosition.x, worldPosition.y,
+		cameraPosition.z));
+	moveCamera->setTag(MOVE_ACTION_TAG);
+	// First stop any runing moving actions
+	defaultCamera->stopActionByTag(MOVE_ACTION_TAG);
+	// Then start new action
+	defaultCamera->runAction(moveCamera);
 }

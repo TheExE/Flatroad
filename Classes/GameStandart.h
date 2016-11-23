@@ -11,7 +11,7 @@
 static const int PI = 3.14159265359;
 static const int SCREEN_WIDTH = 1200;
 static const int SCREEN_HEIGHT = 800;
-static const float CHARACTER_MOVE_SPEED = 100;
+static const float CHARACTER_MOVE_SPEED = 200;
 static const int RECT_DEF_COUNT = 4;
 
 // Tags

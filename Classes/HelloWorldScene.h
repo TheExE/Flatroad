@@ -23,14 +23,16 @@ public:
 
 	cocos2d::Node* getRootNode();
 	void addEventListenerWithSceneGraphPriority(cocos2d::EventListener* listener);
-	void notifyCurCharacterAboutInput(cocos2d::Vec2 screenPosInput);
-
+	void receiveInput(cocos2d::Vec2 screenPosInput);
 
 private:
 	cocos2d::Node* pRootNode;
 	std::shared_ptr<Character> m_pWizardChar;
 	std::shared_ptr<InputManager>  m_pInputManager;
 	std::shared_ptr<CameraController> m_pCameraController;
+
+private:
+	cocos2d::Vec2 screenPositionToWorldPosition(cocos2d::Vec2 screenPosition);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

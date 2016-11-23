@@ -5,14 +5,12 @@
 class CharacterHUD
 {
 public:
-	CharacterHUD();
-	~CharacterHUD();
 	bool init(const char* pathToXML);
+	void onCharacterReachedWayPoint();
 
 private:
-	cocos2d::Sprite mCurMoveTarget;
+	cocos2d::Sprite* m_pCurMoveTarget;
 
 private:
-	void onMouseDown(cocos2d::Event event);
-
+	void onMouseDown(cocos2d::Vec2 worldPosition);
 };
