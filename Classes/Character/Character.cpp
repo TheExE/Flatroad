@@ -71,7 +71,7 @@ Vec2 Character::getSpriteHeading(Sprite* sprite)
 	return Vec2(playerPos.x + (rotationRad), playerPos.y + (rotationRad));
 }
 
-void Character::onStartMoving(cocos2d::Vec2 clickInWorld, float movementSpeed)
+void Character::onStartMoving(cocos2d::Vec2 clickInWorld, float timeToMove)
 {
 	Vec2 forward(0, 1);
 	Vec2 toClickInWorldPos = clickInWorld - getPosition();
@@ -99,7 +99,7 @@ void Character::onStartMoving(cocos2d::Vec2 clickInWorld, float movementSpeed)
 	*/
 
 	// Move character and call function once movement is finished
-	FiniteTimeAction* move = MoveTo::create(movementSpeed, clickInWorld);
+	FiniteTimeAction* move = MoveTo::create(timeToMove, clickInWorld);
 	auto moveCallBack = CallFuncN::create(CC_CALLBACK_0(Character::onCharacterMoveFinished, this));
 	cocos2d::Vector<FiniteTimeAction*> allActions;
 	allActions.pushBack(move);

@@ -6,6 +6,7 @@
 class Character;
 class InputManager;
 class CameraController;
+class CharacterHUD;
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -30,6 +31,7 @@ private:
 	std::shared_ptr<Character> m_pWizardChar;
 	std::shared_ptr<InputManager>  m_pInputManager;
 	std::shared_ptr<CameraController> m_pCameraController;
+	std::shared_ptr<CharacterHUD> m_pCharacterHUD;
 
 private:
 	cocos2d::Vec2 screenPositionToWorldPosition(cocos2d::Vec2 screenPosition);

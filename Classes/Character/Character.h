@@ -9,7 +9,7 @@ class Character: public cocos2d::Sprite
 {
 public:
 	bool init(const char* pathToXML);
-	void onStartMoving(cocos2d::Vec2 clickScreenPos, float movementSpeed);
+	void onStartMoving(cocos2d::Vec2 clickScreenPos, float timeToMove);
 
 private:
 	std::string mBaseSpriteFrameName;

@@ -5,6 +5,7 @@
 #include "Input/InputManager.h"
 #include "Camera/CameraController.h"
 #include "GameStandart.h"
+#include "HUD/CharacterHUD.h"
 
 USING_NS_CC;
 
@@ -34,7 +35,10 @@ bool HelloWorld::init()
 		return false;
 	}
 
+	// init and add root node to this layer
 	pRootNode = CSLoader::createNode("MainScene.csb");
+	addChild(pRootNode);
+
 	m_pWizardChar.reset(new Character());
 	if (!m_pWizardChar->init("Assets/CharacterDefs/WizardCharacter.xml"))
 	{
@@ -50,12 +54,13 @@ bool HelloWorld::init()
 	{
 		cocos2d::log("HelloWorldScene: Failed to initialize Camera controller !");
 	}
-	
-	
-	addChild(pRootNode);
+	m_pCharacterHUD.reset(new CharacterHUD());
+	if (!m_pCharacterHUD->init("Assets/CharacterDefs/HUD.xml", pRootNode))
+	{
+		cocos2d::log("HelloWorldScene: Failed to initiazlize Character controller !");
+	}
+
 	pRootNode->addChild(m_pWizardChar.get());
-
-
 	return true;
 }
 
@@ -65,11 +70,14 @@ void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
 	// Cauculate move speed
 	Vec2 clickInWorld = screenPositionToWorldPosition(screenPosInput);
 	float distanceToTravel = getPosition().distance(clickInWorld);
-	float movementSpeed = distanceToTravel / CHARACTER_MOVE_SPEED;
+	float moveTime = distanceToTravel / CHARACTER_MOVE_SPEED;
 
 	// Inform character and camera to move
-	m_pWizardChar->onStartMoving(clickInWorld, movementSpeed);
-	m_pCameraController->moveCameraTo(clickInWorld, movementSpeed);
+	m_pWizardChar->onStartMoving(clickInWorld, moveTime);
+	m_pCameraController->moveCameraTo(clickInWorld, moveTime);
+
+	// Draw HUD point at target area
+	m_pCharacterHUD->onMouseDown(clickInWorld, moveTime);
 }
 Node* HelloWorld::getRootNode()
 {

@@ -17,6 +17,7 @@ static const int RECT_DEF_COUNT = 4;
 // Tags
 static const int MOVE_ACTION_TAG = 1;
 static const int WALK_ANIM_TAG = 2;
+static const int MOVE_TARGET_ACTION_TAG = 3;
 
 // XML KEYWORDS
 static const char* WALK_ANIM = "WalkAnim";
