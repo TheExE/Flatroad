@@ -46,6 +46,12 @@
     <Filter Include="src\Sources\Camera">
       <UniqueIdentifier>{e720cf73-c3d5-4937-b838-1ca822115fdf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Headers\Enemy">
+      <UniqueIdentifier>{e8f5c88c-9fa2-4288-9946-e7bebe484537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sources\Enemy">
+      <UniqueIdentifier>{f34f1251-3444-4834-828a-26f499ecf3d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,6 +77,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Camera\CameraController.cpp">
       <Filter>src\Sources\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Enemy\Enemy.cpp">
+      <Filter>src\Sources\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Camera\CameraController.h">
       <Filter>src\Headers\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Enemy\Enemy.h">
+      <Filter>src\Headers\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

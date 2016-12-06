@@ -25,6 +25,7 @@ public:
 	cocos2d::Node* getRootNode();
 	void addEventListenerWithSceneGraphPriority(cocos2d::EventListener* listener);
 	void receiveInput(cocos2d::Vec2 screenPosInput);
+	void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode);
 
 private:
 	cocos2d::Node* pRootNode;

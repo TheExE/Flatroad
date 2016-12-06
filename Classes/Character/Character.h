@@ -10,6 +10,7 @@ class Character: public cocos2d::Sprite
 public:
 	bool init(const char* pathToXML);
 	void onStartMoving(cocos2d::Vec2 clickScreenPos, float timeToMove);
+	void onShootSpell();
 
 private:
 	std::string mBaseSpriteFrameName;
@@ -20,4 +21,5 @@ private:
 	void initGraphics(const char* pathToXML);
 	cocos2d::Vec2 getSpriteHeading(cocos2d::Sprite* sprite);
 	void onCharacterMoveFinished();	
+
 };

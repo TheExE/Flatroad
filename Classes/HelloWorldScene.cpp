@@ -93,3 +93,15 @@ Vec2 HelloWorld::screenPositionToWorldPosition(cocos2d::Vec2 screenPosition)
 	return Vec2(playerCharPos.x + (screenPosition.x - (SCREEN_WIDTH / 2)),
 		playerCharPos.y + ((screenPosition.y - (SCREEN_HEIGHT / 2)) * (-1)));
 }
+void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode)
+{
+	switch (keyCode)
+	{
+	case EventKeyboard::KeyCode::KEY_1:
+			
+		break;
+
+	default:
+		break;
+	}
+}
