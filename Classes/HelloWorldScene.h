@@ -21,7 +21,9 @@ public:
     CREATE_FUNC(HelloWorld);
 	
 	void update(float deltaTime) override;
+	void onEnter() override;
 
+	void initSceneUI();
 	cocos2d::Node* getRootNode();
 	void addEventListenerWithSceneGraphPriority(cocos2d::EventListener* listener);
 	void receiveInput(cocos2d::Vec2 screenPosInput);

@@ -9,10 +9,11 @@ class InputManager
 public:
 	InputManager();
 	~InputManager();
-	bool init(HelloWorld* pGame);
+	bool init(cocos2d::Node* pInputLayer, HelloWorld* pGame);
 
 private:
-	HelloWorld* pGame;
+	cocos2d::Node* m_pInputLayer;
+	HelloWorld* m_pGame;
 
 private:
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);

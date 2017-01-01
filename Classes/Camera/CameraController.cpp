@@ -4,7 +4,7 @@
 
 using namespace cocos2d;
 
-bool CameraController::init(Camera* pMainCamera, Character* pCurCharacter)
+bool CameraController::init(Character* pCurCharacter)
 {
 	m_pCurCharacter = pCurCharacter;
 	return true;

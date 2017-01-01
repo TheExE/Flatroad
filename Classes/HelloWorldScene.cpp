@@ -22,7 +22,6 @@ Scene* HelloWorld::createScene()
 	// add layer as a child to scene
 	scene->addChild(layer);
 
-
 	// return the scene
 	return scene;
 }
@@ -44,13 +43,8 @@ bool HelloWorld::init()
 	{
 		cocos2d::log("HelloWorldScene: %s", "Failed to initialize wiz character !");
 	}
-	m_pInputManager.reset(new InputManager());
-	if (!m_pInputManager->init(this))
-	{
-		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
-	}
 	m_pCameraController.reset(new CameraController());
-	if(!m_pCameraController->init(Camera::getDefaultCamera(), m_pWizardChar.get()))
+	if(!m_pCameraController->init(m_pWizardChar.get()))
 	{
 		cocos2d::log("HelloWorldScene: Failed to initialize Camera controller !");
 	}
@@ -104,4 +98,21 @@ void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode)
 	default:
 		break;
 	}
+}
+void HelloWorld::initSceneUI()
+{
+	// Insert main layer
+	auto uiLayer = CSLoader::createNode("BaseUI.csb");
+	Camera::getDefaultCamera()->addChild(uiLayer);
+
+	// 
+	m_pInputManager.reset(new InputManager());
+	if (!m_pInputManager->init(uiLayer, this))
+	{
+		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
+	}
+}
+void HelloWorld::onEnter()
+{
+	initSceneUI();
 }

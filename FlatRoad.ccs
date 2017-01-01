@@ -5,7 +5,9 @@
       <RootFolder Name=".">
         <TmxFile Name="constantinapole.tmx" />
         <Image Name="HelloWorld.png" />
+        <Project Name="BaseUI.csd" Type="Layer" />
         <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="pixel.png" />
         <Image Name="tileset.png" />
       </RootFolder>
     </Group>

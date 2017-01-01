@@ -24,6 +24,8 @@ bool CharacterHUD::init(const char* pathToXML, Node* pRootNode)
 		pRootNode->addChild(m_pCurMoveTarget);
 	}
 
+	m_DefaultCamera = Camera::getDefaultCamera();
+
 
 	return m_pCurMoveTarget != nullptr;
 }
@@ -49,4 +51,19 @@ void CharacterHUD::onMouseDown(cocos2d::Vec2 worldPosition, float delayTime)
 void CharacterHUD::onCharacterReachedWayPoint()
 {
 	m_pCurMoveTarget->setVisible(false);
+}
+
+void CharacterHUD::addUINode(cocos2d::Node* uiNode)
+{
+	
+}
+
+void update(float deltaTime)
+{
+	// updates all UI elements to camera space
+/*	for (int i = 0; i < m_UINodes.Lenght(); i++)
+	{
+		Vec3 curPosition = mUINodes[i]->getPosition();
+		m_UINodes[i]->setPosition(m_DefaultCamera->getPosition() - curPosition);
+	}*/
 }
