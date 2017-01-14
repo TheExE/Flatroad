@@ -1,0 +1,29 @@
+#include "StateMachine.h"
+#include "State.h"
+#include "../Enemy/Enemy.h"
+#include "WanderState.h"
+
+StateMachine::StateMachine()
+{
+
+}
+StateMachine::~StateMachine()
+{
+}
+bool StateMachine::init(Enemy* pOwner) 
+{
+	m_pOwner = pOwner;
+	switchState(new WanderState());
+
+	return pOwner != nullptr;
+}
+void StateMachine::switchState(State* pNewState)
+{
+	m_pCurState->onExit();
+	pNewState->onEnter(m_pOwner);
+	m_pCurState = pNewState;
+}
+void StateMachine::update(float deltaTime)
+{
+	m_pCurState->onUpdate(deltaTime);
+}

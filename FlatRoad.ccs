@@ -4,11 +4,15 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <TmxFile Name="constantinapole.tmx" />
+<<<<<<< bf0942ba34b2e7d4bbf018b9a0e8e6dadab784c3
         <Image Name="HelloWorld.png" />
         <Project Name="BaseUI.csd" Type="Layer" />
+=======
+>>>>>>> Added StateMachine for Enemy and fixed main character movement speed.
         <Project Name="MainScene.csd" Type="Scene" />
         <Image Name="pixel.png" />
         <Image Name="tileset.png" />
+        <Image Name="white-pixel.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

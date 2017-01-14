@@ -6,6 +6,7 @@
 #include "Camera/CameraController.h"
 #include "GameStandart.h"
 #include "HUD/CharacterHUD.h"
+#include "Enemy/Enemy.h"
 
 USING_NS_CC;
 
@@ -35,26 +36,41 @@ bool HelloWorld::init()
 	}
 
 	// init and add root node to this layer
-	pRootNode = CSLoader::createNode("MainScene.csb");
-	addChild(pRootNode);
+	m_pRootNode = CSLoader::createNode("MainScene.csb");
+	addChild(m_pRootNode);
 
-	m_pWizardChar.reset(new Character());
+	m_pWizardChar = new Character();
 	if (!m_pWizardChar->init("Assets/CharacterDefs/WizardCharacter.xml"))
 	{
 		cocos2d::log("HelloWorldScene: %s", "Failed to initialize wiz character !");
 	}
+<<<<<<< bf0942ba34b2e7d4bbf018b9a0e8e6dadab784c3
 	m_pCameraController.reset(new CameraController());
 	if(!m_pCameraController->init(m_pWizardChar.get()))
+=======
+	m_pInputManager = new InputManager();
+	if (!m_pInputManager->init(this))
+	{
+		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
+	}
+	m_pCameraController = new CameraController();
+	if(!m_pCameraController->init(Camera::getDefaultCamera(), m_pWizardChar))
+>>>>>>> Added StateMachine for Enemy and fixed main character movement speed.
 	{
 		cocos2d::log("HelloWorldScene: Failed to initialize Camera controller !");
 	}
-	m_pCharacterHUD.reset(new CharacterHUD());
-	if (!m_pCharacterHUD->init("Assets/CharacterDefs/HUD.xml", pRootNode))
+	m_pCharacterHUD = new CharacterHUD();
+	if (!m_pCharacterHUD->init("Assets/CharacterDefs/HUD.xml", m_pRootNode))
 	{
 		cocos2d::log("HelloWorldScene: Failed to initiazlize Character controller !");
 	}
+	m_pEnemy = new Enemy();
+	if (!m_pEnemy->init((Sprite*)m_pRootNode->getChildByName(ENEMY_BUNNY), 1, 10, 20))
+	{
+		cocos2d::log("HelloWorldScene: Failed to initialize Enemy!");
+	}
 
-	pRootNode->addChild(m_pWizardChar.get());
+	m_pRootNode->addChild(m_pWizardChar);
 	return true;
 }
 
@@ -63,7 +79,7 @@ void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
 {
 	// Cauculate move speed
 	Vec2 clickInWorld = screenPositionToWorldPosition(screenPosInput);
-	float distanceToTravel = getPosition().distance(clickInWorld);
+	float distanceToTravel = m_pWizardChar->getPosition().distance(clickInWorld);
 	float moveTime = distanceToTravel / CHARACTER_MOVE_SPEED;
 
 	// Inform character and camera to move
@@ -75,7 +91,7 @@ void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
 }
 Node* HelloWorld::getRootNode()
 {
-	return pRootNode;
+	return m_pRootNode;
 }
 void HelloWorld::addEventListenerWithSceneGraphPriority(EventListener* listener)
 {

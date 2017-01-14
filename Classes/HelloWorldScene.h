@@ -7,6 +7,7 @@ class Character;
 class InputManager;
 class CameraController;
 class CharacterHUD;
+class Enemy;
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -30,11 +31,13 @@ public:
 	void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode);
 
 private:
-	cocos2d::Node* pRootNode;
-	std::shared_ptr<Character> m_pWizardChar;
-	std::shared_ptr<InputManager>  m_pInputManager;
-	std::shared_ptr<CameraController> m_pCameraController;
-	std::shared_ptr<CharacterHUD> m_pCharacterHUD;
+	cocos2d::Node* m_pRootNode;
+	Character* m_pWizardChar;
+	InputManager*  m_pInputManager;
+	CameraController* m_pCameraController;
+	CharacterHUD* m_pCharacterHUD;
+	Enemy* m_pEnemy;
+	
 
 private:
 	cocos2d::Vec2 screenPositionToWorldPosition(cocos2d::Vec2 screenPosition);

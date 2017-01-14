@@ -1,18 +1,44 @@
 #include "Enemy.h"
-#include "Libs/tinyxml2.h"
+#include "../StateMachine/StateMachine.h"
+
+using namespace cocos2d;
 
 
-bool Enemy::init(const char* pPath)
+Enemy::Enemy()
 {
-	tinyxml2::XMLDocument doc;
-	std::string path = "../Resources/res/";
-	path.append(pPath);
-	doc.LoadFile(path.c_str());
-	tinyxml2::XMLNode* pRoot = doc.RootElement();
-	if (!pRoot)
-	{
-		cocos2d::log("Enemy: Failed to load XML!");
-	}
+}
+Enemy::~Enemy()
+{
+
+}
+
+bool Enemy::init(Sprite* enemySprite, int level, float moveSpeed, float radius)
+{
+	m_pEnemySprite = enemySprite;
+	m_pStateMachine = new StateMachine();
+	m_BasePosition = enemySprite->getPosition();
 
 	return true;
+}
+
+void Enemy::update(float deltaTime)
+{
+	m_pStateMachine->update(deltaTime);
+}
+
+Sprite* Enemy::getSprite() const
+{
+	return m_pEnemySprite;
+}
+float Enemy::getActiveRadius() const
+{
+	return m_ActiveRadius;
+}
+Vec2 Enemy::getBasePosition() const
+{
+	return m_BasePosition;
+}
+float Enemy::getMovementSpeed() const
+{
+	return m_MoveSpeed;
 }

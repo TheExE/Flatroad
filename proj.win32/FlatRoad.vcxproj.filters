@@ -10,108 +10,105 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Headers">
-      <UniqueIdentifier>{8de331c7-2b75-496b-8958-8801b888674f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Sources">
-      <UniqueIdentifier>{11281ed7-679d-47be-84e5-bc99c9ae8154}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Headers\Characters">
-      <UniqueIdentifier>{70f1b69d-f5c7-4483-adc9-9c74ec6fcf9d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Sources\Characters">
-      <UniqueIdentifier>{4509ec8f-3c29-415e-a000-31b9083ee34d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Headers\Input">
-      <UniqueIdentifier>{1531da8e-b270-46c6-b72e-c378b37fc357}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Sources\Input">
-      <UniqueIdentifier>{62cc6f5a-66b0-404f-99b3-3e227511f287}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Headers\HUD">
-      <UniqueIdentifier>{986a4187-c13c-4842-b423-022101f92520}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Sources\HUD">
-      <UniqueIdentifier>{1ffaee4f-3f06-4c5e-bc01-43732e8bba92}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Headers\Utils">
-      <UniqueIdentifier>{2a2aaf41-4994-4d2d-9d42-a41e39bdf1c1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Sources\Utils">
-      <UniqueIdentifier>{e18648f2-b8ee-46f6-90fc-a7a72e430300}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Headers\Camera">
+    <Filter Include="src\Camera">
       <UniqueIdentifier>{f680f417-e820-4380-bbbd-93f2449c68b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Sources\Camera">
-      <UniqueIdentifier>{e720cf73-c3d5-4937-b838-1ca822115fdf}</UniqueIdentifier>
+    <Filter Include="src\Characters">
+      <UniqueIdentifier>{70f1b69d-f5c7-4483-adc9-9c74ec6fcf9d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Headers\Enemy">
+    <Filter Include="src\Enemy">
       <UniqueIdentifier>{e8f5c88c-9fa2-4288-9946-e7bebe484537}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Sources\Enemy">
-      <UniqueIdentifier>{f34f1251-3444-4834-828a-26f499ecf3d3}</UniqueIdentifier>
+    <Filter Include="src\HUD">
+      <UniqueIdentifier>{986a4187-c13c-4842-b423-022101f92520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Input">
+      <UniqueIdentifier>{1531da8e-b270-46c6-b72e-c378b37fc357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\StateMachine">
+      <UniqueIdentifier>{a7784c90-2689-4fcd-b658-dc2cfd120395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Utils">
+      <UniqueIdentifier>{2a2aaf41-4994-4d2d-9d42-a41e39bdf1c1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src\Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src\Sources</Filter>
+    <ClCompile Include="..\Classes\Camera\CameraController.cpp">
+      <Filter>src\Camera</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Character\Character.cpp">
-      <Filter>src\Sources\Characters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Input\InputManager.cpp">
-      <Filter>src\Sources\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\HUD\CharacterHUD.cpp">
-      <Filter>src\Sources\HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Utils\Utils.cpp">
-      <Filter>src\Sources\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Camera\CameraController.cpp">
-      <Filter>src\Sources\Camera</Filter>
+      <Filter>src\Characters</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Enemy\Enemy.cpp">
-      <Filter>src\Sources\Enemy</Filter>
+      <Filter>src\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HUD\CharacterHUD.cpp">
+      <Filter>src\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Input\InputManager.cpp">
+      <Filter>src\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StateMachine\StateMachine.cpp">
+      <Filter>src\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\Utils.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StateMachine\WanderState.cpp">
+      <Filter>src\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StateMachine\State.cpp">
+      <Filter>src\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\GameStandart.h">
-      <Filter>src\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Character\Character.h">
-      <Filter>src\Headers\Characters</Filter>
+      <Filter>src\Characters</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Input\InputManager.h">
-      <Filter>src\Headers\Input</Filter>
+      <Filter>src\Input</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\HUD\CharacterHUD.h">
-      <Filter>src\Headers\HUD</Filter>
+      <Filter>src\HUD</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Utils\Utils.h">
-      <Filter>src\Headers\Utils</Filter>
+      <Filter>src\Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Camera\CameraController.h">
-      <Filter>src\Headers\Camera</Filter>
+      <Filter>src\Camera</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Enemy\Enemy.h">
-      <Filter>src\Headers\Enemy</Filter>
+      <Filter>src\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StateMachine\StateMachine.h">
+      <Filter>src\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameStandart.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StateMachine\WanderState.h">
+      <Filter>src\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StateMachine\State.h">
+      <Filter>src\StateMachine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

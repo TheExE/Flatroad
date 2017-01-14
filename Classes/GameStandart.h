@@ -13,6 +13,7 @@ static const int SCREEN_WIDTH = 1200;
 static const int SCREEN_HEIGHT = 800;
 static const float CHARACTER_MOVE_SPEED = 200;
 static const int RECT_DEF_COUNT = 4;
+static const int WAITE_BETWEEN_WANDER = 2;	// 2 - seconds
 
 // Tags
 static const int MOVE_ACTION_TAG = 1;
@@ -22,3 +23,6 @@ static const int MOVE_TARGET_ACTION_TAG = 3;
 // XML KEYWORDS
 static const char* WALK_ANIM = "WalkAnim";
 static const char* SPRITE_FRAME = "SpriteFrame";
+
+// Enemys
+static const char* ENEMY_BUNNY = "bunny";

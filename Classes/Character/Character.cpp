@@ -134,3 +134,7 @@ void Character::onCharacterMoveFinished()
 	stopActionByTag(WALK_ANIM_TAG);
 	setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(mBaseSpriteFrameName));
 }
+void Character::onShootSpell() 
+{
+
+}
