@@ -34,6 +34,7 @@ bool HelloWorld::init()
 	{
 		return false;
 	}
+	
 
 	// init and add root node to this layer
 	m_pRootNode = CSLoader::createNode("MainScene.csb");
@@ -44,20 +45,10 @@ bool HelloWorld::init()
 	{
 		cocos2d::log("HelloWorldScene: %s", "Failed to initialize wiz character !");
 	}
-<<<<<<< bf0942ba34b2e7d4bbf018b9a0e8e6dadab784c3
-	m_pCameraController.reset(new CameraController());
-	if(!m_pCameraController->init(m_pWizardChar.get()))
-=======
-	m_pInputManager = new InputManager();
-	if (!m_pInputManager->init(this))
-	{
-		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
-	}
 	m_pCameraController = new CameraController();
-	if(!m_pCameraController->init(Camera::getDefaultCamera(), m_pWizardChar))
->>>>>>> Added StateMachine for Enemy and fixed main character movement speed.
+	if (!m_pCameraController->init())
 	{
-		cocos2d::log("HelloWorldScene: Failed to initialize Camera controller !");
+		cocos2d::log("HelloWorldScene: %s", "Failed to initialize Camera Controller !");
 	}
 	m_pCharacterHUD = new CharacterHUD();
 	if (!m_pCharacterHUD->init("Assets/CharacterDefs/HUD.xml", m_pRootNode))
@@ -75,6 +66,7 @@ bool HelloWorld::init()
 }
 
 void HelloWorld::update(float deltaTime) {}
+
 void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
 {
 	// Cauculate move speed
@@ -92,10 +84,6 @@ void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
 Node* HelloWorld::getRootNode()
 {
 	return m_pRootNode;
-}
-void HelloWorld::addEventListenerWithSceneGraphPriority(EventListener* listener)
-{
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 }
 Vec2 HelloWorld::screenPositionToWorldPosition(cocos2d::Vec2 screenPosition)
 {
@@ -117,18 +105,21 @@ void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode)
 }
 void HelloWorld::initSceneUI()
 {
-	// Insert main layer
-	auto uiLayer = CSLoader::createNode("BaseUI.csb");
-	Camera::getDefaultCamera()->addChild(uiLayer);
-
-	// 
-	m_pInputManager.reset(new InputManager());
-	if (!m_pInputManager->init(uiLayer, this))
+	if (m_pInputManager == nullptr)
 	{
-		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
+		// Insert main layer
+		auto uiLayer = CSLoader::createNode("BaseUI.csb");
+		Camera::getDefaultCamera()->addChild(uiLayer);	
+
+		m_pInputManager = new InputManager();
+		if (!m_pInputManager->init(uiLayer, this))
+		{
+			cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
+		}
 	}
 }
 void HelloWorld::onEnter()
 {
+	Layer::onEnter();
 	initSceneUI();
 }

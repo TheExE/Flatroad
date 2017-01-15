@@ -4,9 +4,8 @@
 
 using namespace cocos2d;
 
-bool CameraController::init(Character* pCurCharacter)
+bool CameraController::init()
 {
-	m_pCurCharacter = pCurCharacter;
 	return true;
 }
 void CameraController::moveCameraTo(cocos2d::Vec2 worldPosition, float movementSpeed)

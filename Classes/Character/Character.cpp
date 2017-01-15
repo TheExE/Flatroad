@@ -10,7 +10,6 @@ bool Character::init(const char* pathToXML)
 	initGraphics(pathToXML);
 	setAnchorPoint(Vec2(0.5, 0.5));
 	setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
-
 	return mBaseSpriteFrameName.length() > 0;
 }
 void Character::initGraphics(const char* pathToXML)

@@ -7,9 +7,8 @@ class Character;
 class CameraController
 {
 public:
-	bool init(Character* pCurCharacter);
+	bool init();
 	void moveCameraTo(cocos2d::Vec2 worldPosition, float movementSpeed);
 
 private:
-	Character* m_pCurCharacter;
 };

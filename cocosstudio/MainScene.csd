@@ -21,14 +21,14 @@
             <PreSize X="4.0000" Y="6.6667" />
             <FileData Type="Normal" Path="constantinapole.tmx" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="bunny" ActionTag="-915998035" Tag="3" IconVisible="False" LeftMargin="1104.0403" RightMargin="-350.0403" TopMargin="-1476.0828" BottomMargin="1910.0828" ctype="SpriteObjectData">
+          <AbstractNodeData Name="bunny" ActionTag="-915998035" Tag="3" IconVisible="False" LeftMargin="226.2504" RightMargin="572.7496" TopMargin="154.7817" BottomMargin="324.2183" ctype="SpriteObjectData">
             <Size X="1.0000" Y="1.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1127.0403" Y="1933.0828" />
-            <Scale ScaleX="100.0000" ScaleY="100.0000" />
+            <Position X="226.7504" Y="324.7183" />
+            <Scale ScaleX="30.0000" ScaleY="30.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="1.4088" Y="4.0273" />
-            <PreSize X="0.0575" Y="0.0958" />
+            <PrePosition X="0.2834" Y="0.6765" />
+            <PreSize X="0.0012" Y="0.0021" />
             <FileData Type="Normal" Path="white-pixel.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
