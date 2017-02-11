@@ -4,12 +4,15 @@
 
 using namespace cocos2d;
 
-WanderState::WanderState() 
+WanderState::WanderState()
+	:
+	State()
 {
     
 }
 bool WanderState::onEnter(Enemy* pTargetEnemy)
 {
+	cocos2d::log("Enemy entered: wander state !!!");
 	m_pTargetEnemy = pTargetEnemy;
 	m_CurTargetPosition = getRandomPosInRange();
 	m_IsMoving = true;

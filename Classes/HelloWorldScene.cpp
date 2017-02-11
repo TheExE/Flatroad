@@ -62,10 +62,14 @@ bool HelloWorld::init()
 	}
 
 	m_pRootNode->addChild(m_pWizardChar);
+	this->scheduleUpdate();
 	return true;
 }
 
-void HelloWorld::update(float deltaTime) {}
+void HelloWorld::update(float deltaTime) 
+{
+	m_pEnemy->update(deltaTime);
+}
 
 void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
 {

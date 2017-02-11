@@ -15,11 +15,14 @@ bool StateMachine::init(Enemy* pOwner)
 	m_pOwner = pOwner;
 	switchState(new WanderState());
 
-	return pOwner != nullptr;
+	return pOwner != NULL;
 }
 void StateMachine::switchState(State* pNewState)
 {
-	m_pCurState->onExit();
+	if (m_pCurState != NULL)
+	{
+		m_pCurState->onExit();
+	}
 	pNewState->onEnter(m_pOwner);
 	m_pCurState = pNewState;
 }
