@@ -22,7 +22,6 @@ public:
     CREATE_FUNC(HelloWorld);
 	
 	void update(float deltaTime) override;
-	void onEnter() override;
 
 	void initSceneUI();
 	cocos2d::Node* getRootNode();

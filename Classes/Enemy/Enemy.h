@@ -3,6 +3,7 @@
 #include "cocos2d.h"
 
 class StateMachine;
+class Spell;
 
 class Enemy
 {
@@ -21,8 +22,10 @@ private:
 	StateMachine* m_pStateMachine;
 	cocos2d::Sprite* m_pEnemySprite;
 	cocos2d::Vec2 m_BasePosition;
+	std::vector<Spell*> m_SpellList;
 	int m_Level;
 	float m_Health;
 	float m_MoveSpeed;
 	float m_ActiveRadius;
+	float m_DamageDealt;
 };

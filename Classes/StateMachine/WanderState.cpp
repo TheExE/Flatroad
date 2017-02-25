@@ -36,13 +36,16 @@ void WanderState::onUpdate(float deltaTime)
 	{
 		// Walk to cur target position
 		Vec2 curPosition = m_pTargetEnemy->getSprite()->getPosition();
-		Vec2 toTargetPosition = (curPosition - m_CurTargetPosition);
-		toTargetPosition.normalize();
+		Vec2 toTargetPosition = (m_CurTargetPosition - curPosition);
+		Vec2 toTargetPositionNormalized = toTargetPosition.getNormalized();
+	
 		float enemySpeed = m_pTargetEnemy->getMovementSpeed()*deltaTime;
-		m_pTargetEnemy->getSprite()->setPosition(curPosition + (toTargetPosition*enemySpeed));
+		m_pTargetEnemy->getSprite()->setPosition(curPosition + 
+			(toTargetPositionNormalized * enemySpeed));
 
 		// Agent has arrived at destination
-		if (toTargetPosition.x == 0 && toTargetPosition.y == 0)
+		float distanceToTarget = toTargetPosition.length();
+		if ( distanceToTarget < enemySpeed )
 		{
 			m_IsMoving = false;
 		}
@@ -55,10 +58,10 @@ void WanderState::onExit()
 Vec2 WanderState::getRandomPosInRange()
 {
 	float radius = m_pTargetEnemy->getActiveRadius();
-	float newX = RandomHelper::random_int<int>(0, radius);
-	float newY = RandomHelper::random_int<int>(0, radius);
-	Vec2 basePosition = m_pTargetEnemy->getBasePosition();
+	float newX = RandomHelper::random_int<int>(-radius, radius);
+	float newY = RandomHelper::random_int<int>(-radius, radius);
+	Vec2* basePosition = &m_pTargetEnemy->getBasePosition();
 
-	return Vec2(basePosition.x + newX, basePosition.y + newY);
+	return Vec2(basePosition->x + newX, basePosition->y + newY);
 }
 

@@ -1,11 +1,15 @@
 #include "Enemy.h"
 #include "../StateMachine/StateMachine.h"
+#include <cmath>
+#include "../Entities/Spell.h"
 
 using namespace cocos2d;
 
 
 Enemy::Enemy()
 {
+	m_pStateMachine = NULL;
+	m_pEnemySprite = NULL;
 }
 Enemy::~Enemy()
 {
@@ -16,9 +20,12 @@ bool Enemy::init(Sprite* enemySprite, int level, float moveSpeed, float radius)
 {
 	m_pEnemySprite = enemySprite;
 	m_pStateMachine = new StateMachine();
-	m_BasePosition = enemySprite->getPosition();
+	m_BasePosition = Vec2(enemySprite->getPosition());
 	m_ActiveRadius = radius;
 	m_MoveSpeed = moveSpeed;
+	m_DamageDealt = level + log10(level);
+	m_SpellList.push_back(new Spell());
+	m_SpellList.at(0)->init(1, 100);
 
 	return true && m_pStateMachine->init(this);
 }

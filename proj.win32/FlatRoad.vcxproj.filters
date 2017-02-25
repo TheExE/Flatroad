@@ -13,12 +13,6 @@
     <Filter Include="src\Camera">
       <UniqueIdentifier>{f680f417-e820-4380-bbbd-93f2449c68b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Characters">
-      <UniqueIdentifier>{70f1b69d-f5c7-4483-adc9-9c74ec6fcf9d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Enemy">
-      <UniqueIdentifier>{e8f5c88c-9fa2-4288-9946-e7bebe484537}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\HUD">
       <UniqueIdentifier>{986a4187-c13c-4842-b423-022101f92520}</UniqueIdentifier>
     </Filter>
@@ -31,6 +25,15 @@
     <Filter Include="src\Utils">
       <UniqueIdentifier>{2a2aaf41-4994-4d2d-9d42-a41e39bdf1c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Entities">
+      <UniqueIdentifier>{f4f160ad-3d6a-4ef9-8029-325d66e8d7bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entities\Enemy">
+      <UniqueIdentifier>{e8f5c88c-9fa2-4288-9946-e7bebe484537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entities\Characters">
+      <UniqueIdentifier>{70f1b69d-f5c7-4483-adc9-9c74ec6fcf9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -40,10 +43,10 @@
       <Filter>src\Camera</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Character\Character.cpp">
-      <Filter>src\Characters</Filter>
+      <Filter>src\Entities\Characters</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Enemy\Enemy.cpp">
-      <Filter>src\Enemy</Filter>
+      <Filter>src\Entities\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HUD\CharacterHUD.cpp">
       <Filter>src\HUD</Filter>
@@ -69,13 +72,16 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Entities\Spell.cpp">
+      <Filter>src\Entities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Character\Character.h">
-      <Filter>src\Characters</Filter>
+      <Filter>src\Entities\Characters</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Input\InputManager.h">
       <Filter>src\Input</Filter>
@@ -90,7 +96,7 @@
       <Filter>src\Camera</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Enemy\Enemy.h">
-      <Filter>src\Enemy</Filter>
+      <Filter>src\Entities\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\StateMachine\StateMachine.h">
       <Filter>src\StateMachine</Filter>
@@ -109,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\StateMachine\State.h">
       <Filter>src\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entities\Spell.h">
+      <Filter>src\Entities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -50,13 +50,21 @@ bool HelloWorld::init()
 	{
 		cocos2d::log("HelloWorldScene: %s", "Failed to initialize Camera Controller !");
 	}
+	
+
+	auto uiLayer = CSLoader::createNode("BaseUI.csb");
+	m_pInputManager = new InputManager();
+	if (!m_pInputManager->init(uiLayer, this))
+	{
+		cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
+	}
 	m_pCharacterHUD = new CharacterHUD();
-	if (!m_pCharacterHUD->init("Assets/CharacterDefs/HUD.xml", m_pRootNode))
+	if (!m_pCharacterHUD->init("Assets/CharacterDefs/HUD.xml", m_pRootNode, uiLayer))
 	{
 		cocos2d::log("HelloWorldScene: Failed to initiazlize Character controller !");
 	}
 	m_pEnemy = new Enemy();
-	if (!m_pEnemy->init((Sprite*)m_pRootNode->getChildByName(ENEMY_BUNNY), 1, 10, 20))
+	if (!m_pEnemy->init((Sprite*)m_pRootNode->getChildByName(ENEMY_BUNNY), 1, 5, 100))
 	{
 		cocos2d::log("HelloWorldScene: Failed to initialize Enemy!");
 	}
@@ -106,24 +114,4 @@ void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode)
 	default:
 		break;
 	}
-}
-void HelloWorld::initSceneUI()
-{
-	if (m_pInputManager == nullptr)
-	{
-		// Insert main layer
-		auto uiLayer = CSLoader::createNode("BaseUI.csb");
-		Camera::getDefaultCamera()->addChild(uiLayer);	
-
-		m_pInputManager = new InputManager();
-		if (!m_pInputManager->init(uiLayer, this))
-		{
-			cocos2d::log("HelloWorldScene: Failed to initialize input manager !");
-		}
-	}
-}
-void HelloWorld::onEnter()
-{
-	Layer::onEnter();
-	initSceneUI();
 }

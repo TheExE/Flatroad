@@ -5,7 +5,8 @@
 
 StateMachine::StateMachine()
 {
-
+	m_pOwner = NULL;
+	m_pCurState = NULL;
 }
 StateMachine::~StateMachine()
 {

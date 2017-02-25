@@ -4,7 +4,7 @@
 
 using namespace cocos2d;
 
-bool CharacterHUD::init(const char* pathToXML, Node* pRootNode)
+bool CharacterHUD::init(const char* pathToXML, Node* pRootNode, Node* pUINode)
 {
 	// Load the file
 	tinyxml2::XMLDocument doc;
@@ -24,14 +24,16 @@ bool CharacterHUD::init(const char* pathToXML, Node* pRootNode)
 		pRootNode->addChild(m_pCurMoveTarget);
 	}
 
-	m_DefaultCamera = Camera::getDefaultCamera();
-
+	pRootNode->addChild(pUINode);
+	m_pUINode = pUINode;
 
 	return m_pCurMoveTarget != nullptr;
 }
 
 void CharacterHUD::onMouseDown(cocos2d::Vec2 worldPosition, float delayTime)
 {
+	
+	// Setting up move point on map
 	m_pCurMoveTarget->setPosition(worldPosition);
 	m_pCurMoveTarget->setVisible(true);
 
@@ -47,19 +49,23 @@ void CharacterHUD::onMouseDown(cocos2d::Vec2 worldPosition, float delayTime)
 	// Stop any already running dalay actions
 	m_pCurMoveTarget->stopActionByTag(MOVE_TARGET_ACTION_TAG);
 	m_pCurMoveTarget->runAction(sequence);
+
+
+	// Move baseUI along camera
+	m_pUINode->stopActionByTag(MOVE_UI_ACTION_TAG);
+	Vec2 halfScreen = Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+	Action* moveUI = MoveTo::create(delayTime, worldPosition - halfScreen);
+	moveUI->setTag(MOVE_UI_ACTION_TAG);
+	m_pUINode->runAction(moveUI);
 }
 void CharacterHUD::onCharacterReachedWayPoint()
 {
 	m_pCurMoveTarget->setVisible(false);
 }
 
-void CharacterHUD::addUINode(cocos2d::Node* uiNode)
+void CharacterHUD::update(float deltaTime)
 {
 	
-}
-
-void update(float deltaTime)
-{
 	// updates all UI elements to camera space
 /*	for (int i = 0; i < m_UINodes.Lenght(); i++)
 	{
