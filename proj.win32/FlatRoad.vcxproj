@@ -158,6 +158,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\StateMachine\StateMachine.cpp" />
     <ClCompile Include="..\Classes\StateMachine\WanderState.cpp" />
     <ClCompile Include="..\Classes\Utils\Utils.cpp" />
+    <ClCompile Include="BoxedPhysics.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +167,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\Character\Character.h" />
     <ClInclude Include="..\Classes\Enemy\Enemy.h" />
     <ClInclude Include="..\Classes\Entities\Spell.h" />
+    <ClInclude Include="..\Classes\Entities\SpellType.h" />
     <ClInclude Include="..\Classes\GameStandart.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\HUD\CharacterHUD.h" />
@@ -174,6 +176,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\StateMachine\StateMachine.h" />
     <ClInclude Include="..\Classes\StateMachine\WanderState.h" />
     <ClInclude Include="..\Classes\Utils\Utils.h" />
+    <ClInclude Include="BoxedPhysics.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

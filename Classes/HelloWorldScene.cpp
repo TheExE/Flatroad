@@ -40,11 +40,14 @@ bool HelloWorld::init()
 	m_pRootNode = CSLoader::createNode("MainScene.csb");
 	addChild(m_pRootNode);
 
+	// Create character
 	m_pWizardChar = new Character();
 	if (!m_pWizardChar->init("Assets/CharacterDefs/WizardCharacter.xml"))
 	{
 		cocos2d::log("HelloWorldScene: %s", "Failed to initialize wiz character !");
 	}
+
+	// Create camera controller
 	m_pCameraController = new CameraController();
 	if (!m_pCameraController->init())
 	{

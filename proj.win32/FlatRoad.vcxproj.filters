@@ -34,6 +34,9 @@
     <Filter Include="src\Entities\Characters">
       <UniqueIdentifier>{70f1b69d-f5c7-4483-adc9-9c74ec6fcf9d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Entities\Spells">
+      <UniqueIdentifier>{745d1f0f-36ef-43f5-8a56-8277b0df763a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,8 +75,9 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="BoxedPhysics.cpp" />
     <ClCompile Include="..\Classes\Entities\Spell.cpp">
-      <Filter>src\Entities</Filter>
+      <Filter>src\Entities\Spells</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,8 +120,12 @@
     <ClInclude Include="..\Classes\StateMachine\State.h">
       <Filter>src\StateMachine</Filter>
     </ClInclude>
+    <ClInclude Include="BoxedPhysics.h" />
     <ClInclude Include="..\Classes\Entities\Spell.h">
-      <Filter>src\Entities</Filter>
+      <Filter>src\Entities\Spells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entities\SpellType.h">
+      <Filter>src\Entities\Spells</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

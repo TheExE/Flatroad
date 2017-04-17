@@ -1,7 +1,7 @@
 #include "Character.h"
-#include "HelloWorldScene.h"
 #include "Libs\tinyxml2.h"
 #include "GameStandart.h"
+#include "Utils/Utils.h"
 
 using namespace cocos2d;
 
@@ -61,13 +61,22 @@ void Character::initGraphics(const char* pathToXML)
 				cocos2d::log("Character: %s", "Sprite failed to initialize");
 			}
 		}
+		else if (String(SPELL_LIST).isEqual(&nodeValue))
+		{
+			// Load all spells from file
+			tinyxml2::XMLNode* pCurSpellNode = pNode->FirstChild();
+			
+			/* Need to use "do while" loop so that action comes first and then check
+			 * Reason for this is that we already got the first element so we dont want
+			 * to change current elemnt before we have added it to the list.			
+			*/ 
+			do 
+			{
+				addSpellElementToAvailableSpells(pCurSpellNode);
+
+			} while (pCurSpellNode = pCurSpellNode->NextSibling());
+		}
 	}
-}
-Vec2 Character::getSpriteHeading(Sprite* sprite)
-{
-	Vec2 playerPos = getPosition();
-	float rotationRad = sprite->getRotation() * PI / 180;
-	return Vec2(playerPos.x + (rotationRad), playerPos.y + (rotationRad));
 }
 
 void Character::onStartMoving(cocos2d::Vec2 clickInWorld, float timeToMove)
@@ -133,7 +142,48 @@ void Character::onCharacterMoveFinished()
 	stopActionByTag(WALK_ANIM_TAG);
 	setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(mBaseSpriteFrameName));
 }
-void Character::onShootSpell() 
-{
 
+// Called when player presses keyboard button for  specific spell
+void Character::onShootSpell(Vec2 direction, SpellType spellType)
+{
+	for(int i = 0; i < mAvailableSpells.size(); i++)
+	{
+		Spell* currentSpell = mAvailableSpells[i];
+		if(currentSpell->GetType() == spellType)
+		{
+			currentSpell->cast(this->getPosition(), Utils::getSpriteHeading(this));
+			break;
+		}
+	}
+}
+void Character::addSpellElementToAvailableSpells(tinyxml2::XMLNode* pSpellNode)
+{
+	// Get the current spell element
+	SpellType curSpellType = strToSpellType(pSpellNode->Value());
+	if (curSpellType != None)
+	{
+		// Set Spell particle
+		Sprite* particle = Sprite::create(pSpellNode->
+			FirstChildElement(PARTICLE)->ToText()->Value());
+
+		// Assert if particle was not initialized
+		assert(particle != nullptr);
+
+		// Set particle color
+		String colorStr = pSpellNode->
+			FirstChildElement(COLOR)->ToText()->Value();
+		particle->setColor(Utils::stringToColor(colorStr, ","));
+
+		// Set Spell damage
+		String spellDmgStr = pSpellNode->
+			FirstChildElement(DAMAGE)->ToText()->Value();
+
+		// Set Spell range
+		String spellRangeStr = pSpellNode->
+			FirstChildElement(RANGE)->ToText()->Value();
+
+		// Add Spell to available spells
+		mAvailableSpells.push_back(Spell::create(curSpellType, particle,
+			spellDmgStr.floatValue(), spellRangeStr.floatValue()));
+	}
 }

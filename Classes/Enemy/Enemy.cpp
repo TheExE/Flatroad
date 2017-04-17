@@ -25,9 +25,9 @@ bool Enemy::init(Sprite* enemySprite, int level, float moveSpeed, float radius)
 	m_MoveSpeed = moveSpeed;
 	m_DamageDealt = level + log10(level);
 	m_SpellList.push_back(new Spell());
-	m_SpellList.at(0)->init(1, 100);
+	m_SpellList.at(0)->init(enemySprite, 50, 100);
 
-	return true && m_pStateMachine->init(this);
+	return m_pStateMachine->init(this);
 }
 
 void Enemy::update(float deltaTime)

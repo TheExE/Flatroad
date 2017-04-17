@@ -22,8 +22,19 @@ static const int MOVE_TARGET_ACTION_TAG = 3;
 static const int MOVE_UI_ACTION_TAG = 4;
 
 // XML KEYWORDS
+
+		// Animation stuff
 static const char* WALK_ANIM = "WalkAnim";
 static const char* SPRITE_FRAME = "SpriteFrame";
+		// Spell stuff
+static const char* SPELL_LIST = "Spells";
+static const char* FIRE_BOLT = "FireBolt";
+static const char* ICE_BOLT = "IceBolt";
+static const char* GROUND_BOLT = "GroundBolt";
+static const char* PARTICLE = "Particle";
+static const char* COLOR = "Color";
+static const char* DAMAGE = "Damage";
+static const char* RANGE = "Range";
 
 // Enemys
 static const char* ENEMY_BUNNY = "bunny";
