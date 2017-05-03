@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<WizardActor>
+	<WalkAnim>
+		<SpriteSheetSoruce>Graphics/Characters/Wizard/player-move-anim.png</SpriteSheetSoruce>
+		<SpriteSheetPlistSource>Graphics/Characters/Wizard/PlayerMove/player-move-anim.plist</SpriteSheetPlistSource>
+		<SpriteFrameName>player-move-anim0-%d.png</SpriteFrameName>
+	</WalkAnim>
+	<Spells>
+		<FireBolt>
+			<Particle>Graphics/Skills/Spells/fireBolt.png</Particle>
+			<Color>1,1,1</Color>
+			<Damage>50</Damage>
+			<Range>100</Range>
+		</FireBolt>
+		<IceBolt>
+			<Particle>Graphics/pixel.png</Particle>
+			<Color>0,0,1</Color>
+			<Damage>60</Damage>
+			<Range>80</Range>
+		</IceBolt>
+		<GroundBolt>
+			<Particle>Graphics/pixel.png</Particle>
+			<Color>0,1,0</Color>
+			<Damage>80</Damage>
+			<Range>20</Range>
+		</GroundBolt>
+	</Spells>
+</WizardActor>

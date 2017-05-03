@@ -1,0 +1,7 @@
+<HUD>
+	<WalkPoint>Graphics/UI/HUD/walkPoint.png</WalkPoint>
+	<SkillPlacement>
+		<Background>Graphics/pixel.png</Background>
+		<CellBackground>Graphics/pixel.png</CellBackground>
+	</SkillPlacement>
+</HUD>

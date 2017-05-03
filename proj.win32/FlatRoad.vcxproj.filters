@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\StateMachine">
+      <UniqueIdentifier>{8b0875b3-ac51-4fe2-a18b-807f45ae6c34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\StateMachine\States">
+      <UniqueIdentifier>{0861cc0f-8600-43a9-bf51-5ef57aaa3326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entities">
+      <UniqueIdentifier>{de34fbea-fde0-4ea7-8cff-e1f352eac800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entities\Enemy">
+      <UniqueIdentifier>{49b7239e-cd2f-4d51-9ba6-d1ba75c7325a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entities\PlayerCharacter">
+      <UniqueIdentifier>{a0bd70b4-02c2-4030-b863-b4f517341494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entities\Skills">
+      <UniqueIdentifier>{5f8da509-e8f6-4c32-a3c1-f0b0d3e6252e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UI">
+      <UniqueIdentifier>{f1291d1e-ebb0-40ea-ac66-e0fb95a4fa9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UI\Menu">
+      <UniqueIdentifier>{30bbd44e-1317-4a2c-b107-b90a4a4d7478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UI\InGame">
+      <UniqueIdentifier>{a3263c3e-b5dd-4427-94af-458b81b9a9ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UI\InGame\HUD">
+      <UniqueIdentifier>{e06ccee5-33ac-4975-9d00-891814b7b8d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\System">
+      <UniqueIdentifier>{798a0901-7f87-4443-b31a-78c7a501cec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\System\ExternalLibs">
+      <UniqueIdentifier>{55be58d7-ab13-414e-862b-7b987723615f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\System\Utils">
+      <UniqueIdentifier>{b4177ff9-031b-4576-9eb5-ac3b82ff6c35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\System\Input">
+      <UniqueIdentifier>{88704358-0d97-4792-a212-a7d2dede65e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Camera">
+      <UniqueIdentifier>{e08adc2f-cfc9-42ef-8b02-88a82e6265f5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StateMachine\StateMachine.cpp">
+      <Filter>src\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StateMachine\WanderState.cpp">
+      <Filter>src\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entities\Character\Character.cpp">
+      <Filter>src\Entities\PlayerCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entities\Enemy\Enemy.cpp">
+      <Filter>src\Entities\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entities\Skills\Spell.cpp">
+      <Filter>src\Entities\Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\CharacterHUD.cpp">
+      <Filter>src\UI\InGame\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Libs\tinyxml2.cpp">
+      <Filter>src\System\ExternalLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Utils\Utils.cpp">
+      <Filter>src\System\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Camera\CameraController.cpp">
+      <Filter>src\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Input\InputManager.cpp">
+      <Filter>src\System\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\SkillPlacementHUD.cpp">
+      <Filter>src\UI\InGame\HUD</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\SkillPlacmentHUD.h">
+      <Filter>src\UI\InGame\HUD</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

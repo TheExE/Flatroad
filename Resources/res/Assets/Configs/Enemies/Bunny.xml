@@ -1,0 +1,6 @@
+<Bunny>
+	<BaseSprite>Graphics/pixel.png</BaseSprite>
+	<Level>1</Level>
+	<MoveSpeed>10</MoveSpeed>
+	<Radius>80</Radius>
+</Bunny>
