@@ -9,13 +9,15 @@
 
 // Default values
 static const int PI = 3.14159265359;
-static const int SCREEN_WIDTH = 1200;
-static const int SCREEN_HEIGHT = 800;
+static const int SCREEN_WIDTH = 900;
+static const int SCREEN_HEIGHT = 600;
 static const float CHARACTER_MOVE_SPEED = 200;
 static const int RECT_DEF_COUNT = 4;
 static const int WAITE_BETWEEN_WANDER = 2;	// 2 - seconds
 static const int MAX_SKILL_IN_HUD = 9;
-static const int CELL_SIZE = 64;
+static const float SCALE = ((float)SCREEN_WIDTH / (float)SCREEN_HEIGHT);
+static const float CELL_SIZE =  SCALE * 40.0f;
+static const float BUNNY_SIZE = SCALE * 16.0f;
 
 // Z order
 static const int Z_ORDER_WORLDMAP = -2;

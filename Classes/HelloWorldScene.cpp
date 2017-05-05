@@ -8,6 +8,8 @@
 #include "UI/CharacterHUD.h"
 #include "Entities/Enemy/Enemy.h"
 #include <System/Utils/Utils.h>
+//#include <network\WebSocket.h>
+
 
 USING_NS_CC;
 
@@ -25,6 +27,12 @@ HelloWorld::~HelloWorld()
 }
 Scene* HelloWorld::createScene()
 {
+	/*
+	 * --- Example of websocket creation ---
+	 * network::WebSocket* s = new network::WebSocket();
+	*/
+
+
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 
@@ -55,6 +63,7 @@ bool HelloWorld::init()
 		"TileMaps/Constantinapole/constantinapole.tmx"));
 	m_pRootNode->addChild(map, Z_ORDER_WORLDMAP);
 
+	Node* pEntityLayer = Node::create();
 	// Create character
 	m_pWizardChar = new Character();
 	if (!m_pWizardChar->init("Configs/Characters/Wizard.xml"))
@@ -63,8 +72,11 @@ bool HelloWorld::init()
 	}
 	else
 	{
-		m_pRootNode->addChild(m_pWizardChar);
+		pEntityLayer->addChild(m_pWizardChar);
 	}
+
+	// Add the entitie layer to root node before UI layer is added	
+	m_pRootNode->addChild(pEntityLayer);
 
 
 	// Setup client interface
@@ -94,7 +106,8 @@ bool HelloWorld::init()
 	}
 	else
 	{
-		m_pRootNode->addChild(m_pEnemy);
+		// Add the enemy to entities layer
+		pEntityLayer->addChild(m_pEnemy);
 	}
 
 	// Scheduling update is necessarry to update enemy AI
@@ -105,7 +118,7 @@ bool HelloWorld::init()
 
 void HelloWorld::update(float deltaTime) 
 {
-	m_pEnemy->update(deltaTime);
+	//m_pEnemy->update(deltaTime);
 }
 
 void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)

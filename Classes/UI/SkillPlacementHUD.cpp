@@ -42,14 +42,14 @@ SkillPlacementHUD* SkillPlacementHUD::create(tinyxml2::XMLNode* pData)
 		hudCellBg->setContentSize(Size(CELL_SIZE, CELL_SIZE));
 		hudCellBg->setColor(Color3B::ORANGE);
 		hudCellBg->setAnchorPoint(Vec2(0, 0));
-		hudCellBg->setPosition(100, 8);
+		hudCellBg->setPosition(SCALE* 40, SCALE);
 		hudBg->addChild(hudCellBg);
 
 		// Add all other hud cells
 		Vec2 curPos = hudCellBg->getPosition();
 		for(unsigned int i = 1; i < MAX_SKILL_IN_HUD; i++) // start at 1 since the first 
 		{													// was already added
-			curPos = Vec2(curPos.x + 50 + CELL_SIZE, curPos.y);
+			curPos = Vec2(curPos.x + (20*SCALE) + CELL_SIZE, curPos.y);
 			Sprite* pCurSprite = Sprite::createWithTexture(hudCellBg->getTexture());
 			pCurSprite->setContentSize(Size(CELL_SIZE, CELL_SIZE));
 			pCurSprite->setColor(hudCellBg->getColor());

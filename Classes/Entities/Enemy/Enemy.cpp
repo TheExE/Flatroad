@@ -26,14 +26,20 @@ bool Enemy::init(const char* pathToXML)
 	m_BasePosition = Vec2(getPosition());
 	m_DamageDealt = m_Level + log10(m_Level);
 	m_SpellList.push_back(new Spell());
-	m_SpellList.at(0)->init(FireBolt, this, 50, 100);
+
+	/* Need to create new instanse of sprite for spell because otherwise
+	 * enemy sprite will be affected by speel changes to its sprite. POINTERS !
+	*/
+	Sprite* pSpellSprite = Sprite::createWithTexture(getTexture());
+	m_SpellList.at(0)->init(FireBolt, pSpellSprite, 50, 100);
 
 	return m_pStateMachine->init(this) && success;
+	return success;
 }
 
 void Enemy::update(float deltaTime)
 {
-	m_pStateMachine->update(deltaTime);
+	//m_pStateMachine->update(deltaTime);
 }
 float Enemy::getActiveRadius() const
 {
@@ -66,13 +72,14 @@ bool Enemy::initFromXML(const char* pathToXML)
 	// Initialize enemy sprite
 	auto spritePath = Utils::appendFullPathToAssetsPath(
 		pXMLSpritePath->ToText()->Value());
-	initWithFile(spritePath);
 	
-	// Log info if sprite not found 
-	if(getTexture() == nullptr)
+	if (!initWithFile(spritePath))
 	{
-		cocos2d::log("Enemy: Sprite not found ! %s", spritePath);
+		// Log info if sprite not found 
+		cocos2d::log("Enemy: Failed to init from file: %s ", spritePath);
 	}
+	setContentSize(Size(BUNNY_SIZE, BUNNY_SIZE));
+	
 
 	// Init enemy level
 	m_Level = std::stoi(pXMLLevel->ToText()->Value());
