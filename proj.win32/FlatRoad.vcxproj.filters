@@ -113,6 +113,9 @@
     <ClInclude Include="..\Classes\UI\SkillPlacmentHUD.h">
       <Filter>src\UI\InGame\HUD</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\GameStandart.h">
+      <Filter>src\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

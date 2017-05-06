@@ -2,6 +2,8 @@
   AssetsManagerEx.cpp
   CCEventAssetsManagerEx.cpp
   CCEventListenerAssetsManagerEx.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\..\extensions\assets-manager\CCEventListenerAssetsManagerEx.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\..\extensions\assets-manager\AssetsManagerEx.cpp)
   Manifest.cpp
   CCControl.cpp
   CCControlButton.cpp
@@ -213,6 +215,7 @@
   CCSprite3D.cpp
   CCSprite3DMaterial.cpp
   CCTerrain.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\3d\CCSprite3D.cpp)
   AudioEngine.cpp
   AudioCache.cpp
   AudioDecoder.cpp
@@ -236,6 +239,12 @@
   CCData.cpp
   CCDataVisitor.cpp
   CCDirector.cpp
+..\base\CCConsole.cpp(434): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 2 has type 'WCHAR *'
+  ..\base\CCConsole.cpp(434): note: consider using '%ls' in the format string
+  ..\base\CCConsole.cpp(434): note: consider using '%lls' in the format string
+  ..\base\CCConsole.cpp(434): note: consider using '%Ls' in the format string
+  ..\base\CCConsole.cpp(434): note: consider using '%ws' in the format string
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\base\CCDataVisitor.cpp)
   CCEvent.cpp
   CCEventAcceleration.cpp
   CCEventCustom.cpp
@@ -244,11 +253,6 @@
   CCEventKeyboard.cpp
   CCEventListener.cpp
   CCEventListenerAcceleration.cpp
-..\base\CCConsole.cpp(434): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 2 has type 'WCHAR *'
-  ..\base\CCConsole.cpp(434): note: consider using '%ls' in the format string
-  ..\base\CCConsole.cpp(434): note: consider using '%lls' in the format string
-  ..\base\CCConsole.cpp(434): note: consider using '%Ls' in the format string
-  ..\base\CCConsole.cpp(434): note: consider using '%ws' in the format string
   CCEventListenerCustom.cpp
   CCEventListenerFocus.cpp
   CCEventListenerKeyboard.cpp
@@ -267,10 +271,12 @@
   CCRef.cpp
   CCScheduler.cpp
   CCScriptSupport.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\base\CCProperties.cpp)
   CCTouch.cpp
   ccTypes.cpp
   CCUserDefault.cpp
   ccUTF8.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\base\ccUTF8.cpp)
   ccUtils.cpp
   CCValue.cpp
   etc1.cpp
@@ -282,12 +288,16 @@
   cocos2d.cpp
   CCArray.cpp
   CCDeprecated.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\deprecated\CCArray.cpp)
   CCDictionary.cpp
   CCNotificationCenter.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\deprecated\CCDictionary.cpp)
   CCSet.cpp
   CCString.cpp
   CCBAnimationManager.cpp
   CCBFileLoader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\deprecated\CCDeprecated.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\deprecated\CCString.cpp)
   CCBKeyframe.cpp
   CCBReader.cpp
   CCBSequence.cpp
@@ -303,6 +313,7 @@
   CCMenuItemLoader.cpp
   CCNode+CCBRelativePositioning.cpp
   CCNodeLoader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\editor-support\cocosbuilder\CCNodeLoader.cpp)
   CCNodeLoaderLibrary.cpp
   CCParticleSystemQuadLoader.cpp
   CCScale9SpriteLoader.cpp
@@ -311,24 +322,25 @@
   CCActionTimeline.cpp
   CCActionTimelineCache.cpp
   CCActionTimelineNode.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CCActionTimelineCache.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CCActionTimelineCache.cpp)
   CCBoneNode.cpp
   CCFrame.cpp
   CCSkeletonNode.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CCActionTimelineCache.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CCActionTimelineCache.cpp)
   CCSkinNode.cpp
   CCTimeLine.cpp
   CSLoader.cpp
   CCActionFrame.cpp
   CCActionFrameEasing.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\editor-support\cocostudio\ActionTimeline\CSLoader.cpp)
   CCActionManagerEx.cpp
   CCActionNode.cpp
   CCActionObject.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CSLoader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CSLoader.cpp)
   CCArmature.cpp
   CCArmatureAnimation.cpp
   CCArmatureDataManager.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CSLoader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\ActionTimeline\CSLoader.cpp)
   CCArmatureDefine.cpp
   CCBatchNode.cpp
   CCBone.cpp
@@ -359,111 +371,112 @@ D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostud
   LocalizationManager.cpp
   TriggerBase.cpp
   TriggerMng.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\FlatBuffersSerialize.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\FlatBuffersSerialize.cpp)
   TriggerObj.cpp
   WidgetCallBackHandlerProtocol.cpp
   ArmatureNodeReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\FlatBuffersSerialize.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\FlatBuffersSerialize.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ArmatureNodeReader\ArmatureNodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ArmatureNodeReader\ArmatureNodeReader.cpp)
   ButtonReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ArmatureNodeReader\ArmatureNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ArmatureNodeReader\ArmatureNodeReader.cpp)
   CheckBoxReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ButtonReader\ButtonReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ButtonReader\ButtonReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\CheckBoxReader\CheckBoxReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\CheckBoxReader\CheckBoxReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ButtonReader\ButtonReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ButtonReader\ButtonReader.cpp)
   ComAudioReader.cpp
   GameMapReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\CheckBoxReader\CheckBoxReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\CheckBoxReader\CheckBoxReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ComAudioReader\ComAudioReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ComAudioReader\ComAudioReader.cpp)
   GameNode3DReader.cpp
   ImageViewReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\editor-support\cocostudio\WidgetReader\GameMapReader\GameMapReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameMapReader\GameMapReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameMapReader\GameMapReader.cpp)
   LayoutReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameNode3DReader\GameNode3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameNode3DReader\GameNode3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ImageViewReader\ImageViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ImageViewReader\ImageViewReader.cpp)
   Light3DReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LayoutReader\LayoutReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LayoutReader\LayoutReader.cpp)
   ListViewReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ComAudioReader\ComAudioReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ComAudioReader\ComAudioReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameMapReader\GameMapReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameMapReader\GameMapReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameNode3DReader\GameNode3DReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\GameNode3DReader\GameNode3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp)
   LoadingBarReader.cpp
   NodeReaderDefine.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ImageViewReader\ImageViewReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ImageViewReader\ImageViewReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LayoutReader\LayoutReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LayoutReader\LayoutReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ListViewReader\ListViewReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ListViewReader\ListViewReader.cpp)
   NodeReaderProtocol.cpp
   NodeReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ListViewReader\ListViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ListViewReader\ListViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\NodeReader\NodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\NodeReader\NodeReader.cpp)
   PageViewReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LoadingBarReader\LoadingBarReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LoadingBarReader\LoadingBarReader.cpp)
   ParticleReader.cpp
   ProjectNodeReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\NodeReader\NodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\NodeReader\NodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LoadingBarReader\LoadingBarReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\LoadingBarReader\LoadingBarReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ProjectNodeReader\ProjectNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ProjectNodeReader\ProjectNodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\PageViewReader\PageViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\PageViewReader\PageViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ProjectNodeReader\ProjectNodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ProjectNodeReader\ProjectNodeReader.cpp)
   ScrollViewReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ParticleReader\ParticleReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ParticleReader\ParticleReader.cpp)
   SingleNodeReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SingleNodeReader\SingleNodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SingleNodeReader\SingleNodeReader.cpp)
   BoneNodeReader.cpp
   SkeletonNodeReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ParticleReader\ParticleReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ParticleReader\ParticleReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SingleNodeReader\SingleNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SingleNodeReader\SingleNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\BoneNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\BoneNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\SkeletonNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\SkeletonNodeReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\PageViewReader\PageViewReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\PageViewReader\PageViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ScrollViewReader\ScrollViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ScrollViewReader\ScrollViewReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\BoneNodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\BoneNodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\SkeletonNodeReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SkeletonReader\SkeletonNodeReader.cpp)
   SliderReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ScrollViewReader\ScrollViewReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\ScrollViewReader\ScrollViewReader.cpp)
   SpriteReader.cpp
   TabControlReader.cpp
   TextAtlasReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SpriteReader\SpriteReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SpriteReader\SpriteReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SliderReader\SliderReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SliderReader\SliderReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TabControlReader\TabControlReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TabControlReader\TabControlReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextAtlasReader\TextAtlasReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextAtlasReader\TextAtlasReader.cpp)
   TextBMFontReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SliderReader\SliderReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SliderReader\SliderReader.cpp)
   TextFieldReader.cpp
   TextReader.cpp
   Node3DReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SpriteReader\SpriteReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\SpriteReader\SpriteReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TabControlReader\TabControlReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TabControlReader\TabControlReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextAtlasReader\TextAtlasReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextAtlasReader\TextAtlasReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextBMFontReader\TextBMFontReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextBMFontReader\TextBMFontReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Node3DReader\Node3DReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Node3DReader\Node3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextBMFontReader\TextBMFontReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextBMFontReader\TextBMFontReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextFieldReader\TextFieldReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextFieldReader\TextFieldReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Node3DReader\Node3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Node3DReader\Node3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextReader\TextReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextReader\TextReader.cpp)
   Sprite3DReader.cpp
   UserCameraReader.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextReader\TextReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextReader\TextReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextFieldReader\TextFieldReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\TextFieldReader\TextFieldReader.cpp)
   Particle3DReader.cpp
   WidgetReader.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Sprite3DReader\Sprite3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Sprite3DReader\Sprite3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\UserCameraReader\UserCameraReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\UserCameraReader\UserCameraReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\WidgetReader.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\WidgetReader.cpp)
   CCAffineTransform.cpp
   CCGeometry.cpp
   CCVertex.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\UserCameraReader\UserCameraReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\UserCameraReader\UserCameraReader.cpp)
   Mat4.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Particle3DReader\Particle3DReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Sprite3DReader\Sprite3DReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\Sprite3DReader\Sprite3DReader.cpp)
   MathUtil.cpp
   Quaternion.cpp
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1522): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\WidgetReader.cpp)
-D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostudio/CSParseBinary_generated.h(1569): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\editor-support\cocostudio\WidgetReader\WidgetReader.cpp)
   TransformUtils.cpp
   Vec2.cpp
   Vec3.cpp
@@ -478,41 +491,44 @@ D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\editor-support/cocostud
   HttpClient.cpp
   SocketIO.cpp
   WebSocket.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\network\SocketIO.cpp)
   CCPhysics3D.cpp
   CCPhysics3DComponent.cpp
   CCPhysics3DConstraint.cpp
   CCPhysics3DDebugDrawer.cpp
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3D.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3D.cpp)
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DComponent.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DComponent.cpp)
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DConstraint.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DConstraint.cpp)
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DDebugDrawer.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DDebugDrawer.cpp)
   CCPhysics3DObject.cpp
   CCPhysics3DShape.cpp
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3D.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3D.cpp)
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DComponent.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DComponent.cpp)
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DConstraint.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DConstraint.cpp)
   CCPhysics3DWorld.cpp
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DDebugDrawer.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DDebugDrawer.cpp)
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DObject.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DObject.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\physics3d\CCPhysics3DObject.cpp)
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DShape.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DShape.cpp)
   CCPhysicsSprite3D.cpp
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DObject.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DObject.cpp)
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DShape.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DShape.cpp)
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DWorld.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DWorld.cpp)
   CCPhysicsBody.cpp
   CCPhysicsContact.cpp
+c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysicsSprite3D.cpp)
+  c:\users\martins\desktop\c++ projects\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysicsSprite3D.cpp)
   CCPhysicsJoint.cpp
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysics3DWorld.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysics3DWorld.cpp)
   CCPhysicsShape.cpp
   CCPhysicsWorld.cpp
-d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): warning C4099: 'btDbvtBroadphase': type name first seen using 'class' now seen using 'struct' (compiling source file ..\physics3d\CCPhysicsSprite3D.cpp)
-  d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollision\broadphasecollision\btDbvtBroadphase.h(62): note: see declaration of 'btDbvtBroadphase' (compiling source file ..\physics3d\CCPhysicsSprite3D.cpp)
   CCFileUtils.cpp
   CCGLView.cpp
   CCImage.cpp
   CCSAXParser.cpp
   CCThread.cpp
   CCGLViewImpl-desktop.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\platform\desktop\CCGLViewImpl-desktop.cpp)
   CCApplication-win32.cpp
   CCCommon-win32.cpp
   CCDevice-win32.cpp
@@ -525,6 +541,7 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   CCGLProgram.cpp
   CCGLProgramCache.cpp
   CCGLProgramState.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\renderer\CCGLProgram.cpp)
   CCGLProgramStateCache.cpp
   ccGLStateCache.cpp
   CCGroupCommand.cpp
@@ -541,7 +558,10 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   CCTechnique.cpp
   CCTexture2D.cpp
   CCTextureAtlas.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\renderer\CCTexture2D.cpp)
   CCTextureCache.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\renderer\CCTextureAtlas.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\renderer\CCTextureCache.cpp)
   CCTextureCube.cpp
   CCTrianglesCommand.cpp
   CCVertexAttribBinding.cpp
@@ -558,13 +578,15 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   UIEditBoxImpl-win32.cpp
   UIHBox.cpp
   UIHelper.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\ui\UIEditBox\UIEditBoxImpl-win32.cpp)
+..\ui\UIEditBox\UIEditBoxImpl-win32.cpp(259): warning C4302: 'type cast': truncation from 'LPCSTR' to 'WORD'
+..\ui\UIEditBox\UIEditBoxImpl-win32.cpp(900): warning C4996: 'cocos2d::ui::EditBoxDelegate::editBoxEditingDidEnd': was declared deprecated
+  C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\ui/UIEditBox/UIEditBox.h(80): note: see declaration of 'cocos2d::ui::EditBoxDelegate::editBoxEditingDidEnd'
   UIImageView.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\ui\UIHelper.cpp)
   UILayout.cpp
   UILayoutComponent.cpp
   UILayoutManager.cpp
-..\ui\UIEditBox\UIEditBoxImpl-win32.cpp(259): warning C4302: 'type cast': truncation from 'LPCSTR' to 'WORD'
-..\ui\UIEditBox\UIEditBoxImpl-win32.cpp(900): warning C4996: 'cocos2d::ui::EditBoxDelegate::editBoxEditingDidEnd': was declared deprecated
-  D:\Programming_stuff\C++\FlatRoad\FlatRoad\cocos2d\cocos\ui/UIEditBox/UIEditBox.h(80): note: see declaration of 'cocos2d::ui::EditBoxDelegate::editBoxEditingDidEnd'
   UILayoutParameter.cpp
   UIListView.cpp
   UILoadingBar.cpp
@@ -574,7 +596,9 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   UIRichText.cpp
   UIScale9Sprite.cpp
   UIScrollView.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\ui\UIRichText.cpp)
   UIScrollViewBar.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\ui\UIScale9Sprite.cpp)
   UISlider.cpp
   UITabControl.cpp
   UIText.cpp
@@ -584,6 +608,7 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   UIVBox.cpp
   UIWebView.cpp
   UIWidget.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file ..\ui\UITextField.cpp)
   CCVRDistortion.cpp
   CCVRDistortionMesh.cpp
   CCVRGenericHeadTracker.cpp
@@ -591,6 +616,7 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   CCAction.cpp
   CCActionCamera.cpp
   CCActionCatmullRom.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCAction.cpp)
   CCActionEase.cpp
   CCActionGrid.cpp
   CCActionGrid3D.cpp
@@ -615,46 +641,72 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   CCDrawNode.cpp
   CCFastTMXLayer.cpp
   CCFastTMXTiledMap.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCFastTMXLayer.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCFastTMXTiledMap.cpp)
   CCFontAtlas.cpp
   CCFontAtlasCache.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCFontAtlas.cpp)
   CCFontCharMap.cpp
   CCFontFNT.cpp
   CCFontFreeType.cpp
+CCFontFreeType.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCFontFNT.cpp)
   CCGLBufferedNode.cpp
   CCGrabber.cpp
   CCGrid.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCFontFreeType.cpp)
   CCLabel.cpp
   CCLabelAtlas.cpp
   CCLabelBMFont.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCLabel.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCLabelAtlas.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCLabelBMFont.cpp)
   CCLabelTextFormatter.cpp
   CCLabelTTF.cpp
   CCLayer.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCLabelTextFormatter.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCLabelTTF.cpp)
   CCLight.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCLayer.cpp)
   CCMenu.cpp
   CCMenuItem.cpp
   CCMotionStreak.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCMenu.cpp)
   CCNode.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCMenuItem.cpp)
   CCNodeGrid.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCNode.cpp)
   CCParallaxNode.cpp
   CCParticleBatchNode.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCParticleBatchNode.cpp)
   CCParticleExamples.cpp
   CCParticleSystem.cpp
   CCParticleSystemQuad.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCParticleSystem.cpp)
   CCProgressTimer.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCParticleSystemQuad.cpp)
   CCProtectedNode.cpp
   CCRenderTexture.cpp
   CCScene.cpp
   CCSprite.cpp
   CCSpriteBatchNode.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCScene.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCSprite.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCSpriteBatchNode.cpp)
   CCSpriteFrame.cpp
   CCSpriteFrameCache.cpp
   CCTextFieldTTF.cpp
   CCTileMapAtlas.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCSpriteFrameCache.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCTextFieldTTF.cpp)
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCTileMapAtlas.cpp)
   CCTMXLayer.cpp
   CCTMXObjectGroup.cpp
   CCTMXTiledMap.cpp
   CCTMXXMLParser.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCTMXLayer.cpp)
   CCTransition.cpp
+C:\Users\Martins\Desktop\C++ Projects\Flatroad\cocos2d\cocos\base/ccUTF8.h : warning C4819: The file contains a character that cannot be represented in the current code page (1257). Save the file in Unicode format to prevent data loss (compiling source file CCTMXTiledMap.cpp)
   CCTransitionPageTurn.cpp
   CCTransitionProgress.cpp
   CCTweenFunction.cpp
@@ -667,7 +719,8 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
   1 File(s) copied
   1 File(s) copied
   2 File(s) copied
-  2 File(s) copied
+  File not found - *.*
+  0 File(s) copied
   2 File(s) copied
   2 File(s) copied
   2 File(s) copied
@@ -677,68 +730,68 @@ d:\programming_stuff\c++\flatroad\flatroad\cocos2d\external\bullet\bulletcollisi
 libbullet.lib(btAlignedAllocator.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
   libchipmunk-2015.lib(chipmunk.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
 libbullet.lib(btAlignedAllocator.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
-     Creating library D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\libcocos2d.lib and object D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\libcocos2d.exp
+     Creating library C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\libcocos2d.lib and object C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\libcocos2d.exp
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
   Finished generating code
 websockets.lib(libwebsockets.obj) : warning LNK4049: locally defined symbol ___iob_func imported
-libchipmunk-2015.lib(chipmunk.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(chipmunk.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpBody.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpBody.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpShape.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpShape.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpConstraint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpConstraint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpPinJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpPinJoint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSlideJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSlideJoint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpPivotJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpPivotJoint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpGrooveJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpGrooveJoint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpDampedSpring.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpDampedSpring.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSpace.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpace.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSpaceComponent.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceComponent.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpArbiter.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpArbiter.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpDampedRotarySpring.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpDampedRotarySpring.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpRotaryLimitJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpRotaryLimitJoint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpRatchetJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpRatchetJoint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpGearJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpGearJoint.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSimpleMotor.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSimpleMotor.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpPolyShape.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpPolyShape.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSpaceQuery.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceQuery.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSpaceStep.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceStep.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSpaceDebug.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceDebug.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpArray.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpArray.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpCollision.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpCollision.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpHashSet.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpHashSet.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpBBTree.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpBBTree.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSpaceHash.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceHash.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpSpatialIndex.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpatialIndex.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libchipmunk-2015.lib(cpRobust.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpRobust.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_aux.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_aux.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_close.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_close.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_codec.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_codec.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_color.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_color.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_compress.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_compress.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_dir.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dir.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_dirinfo.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirinfo.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_dirread.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirread.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_dirwrite.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dirwrite.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_dumpmode.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_dumpmode.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_error.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_error.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_fax3.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_fax3.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_fax3sm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_fax3sm.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_getimage.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_getimage.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_flush.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_flush.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_luv.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_luv.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_lzw.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_lzw.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_next.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_next.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_open.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_open.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_packbits.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_packbits.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_predict.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_predict.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_read.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_read.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_swab.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_swab.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_strip.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_strip.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_thunder.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_thunder.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_tile.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_tile.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_warning.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_warning.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_write.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_write.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-libtiff-2015.lib(tif_win32.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'libtiff-2015.lib(tif_win32.obj)' or at 'D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\vc140.pdb'; linking object as if no debug info
-  libcocos2d.vcxproj -> D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\libcocos2d.dll
-  libcocos2d.vcxproj -> D:\Programming_stuff\C++\FlatRoad\FlatRoad\proj.win32\Debug.win32\libcocos2d.pdb (Full PDB)
+libchipmunk-2015.lib(chipmunk.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(chipmunk.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpBody.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpBody.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpShape.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpShape.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpConstraint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpConstraint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpPinJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpPinJoint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSlideJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSlideJoint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpPivotJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpPivotJoint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpGrooveJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpGrooveJoint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpDampedSpring.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpDampedSpring.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSpace.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpace.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSpaceComponent.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceComponent.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpArbiter.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpArbiter.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpDampedRotarySpring.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpDampedRotarySpring.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpRotaryLimitJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpRotaryLimitJoint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpRatchetJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpRatchetJoint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpGearJoint.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpGearJoint.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSimpleMotor.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSimpleMotor.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpPolyShape.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpPolyShape.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSpaceQuery.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceQuery.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSpaceStep.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceStep.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSpaceDebug.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceDebug.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpArray.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpArray.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpCollision.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpCollision.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpHashSet.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpHashSet.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpBBTree.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpBBTree.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSpaceHash.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpaceHash.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpSpatialIndex.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpSpatialIndex.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libchipmunk-2015.lib(cpRobust.obj) : warning LNK4099: PDB 'chipmunk.pdb' was not found with 'libchipmunk-2015.lib(cpRobust.obj)' or at 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\chipmunk.pdb'; linking object as if no debug info
+libtiff-2015.lib(tif_aux.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_close.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_codec.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_color.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_compress.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_dir.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_dirinfo.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_dirread.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_dirwrite.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_dumpmode.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_error.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_fax3.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_fax3sm.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_getimage.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_flush.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_luv.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_lzw.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_next.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_open.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_packbits.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_predict.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_read.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_swab.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_strip.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_thunder.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_tile.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_warning.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_write.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+libtiff-2015.lib(tif_win32.obj) : warning LNK4204: 'C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\vc140.pdb' is missing debugging information for referencing module; linking object as if no debug info
+  libcocos2d.vcxproj -> C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\libcocos2d.dll
+  libcocos2d.vcxproj -> C:\Users\Martins\Desktop\C++ Projects\Flatroad\proj.win32\Debug.win32\libcocos2d.pdb (Full PDB)
