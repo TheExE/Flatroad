@@ -125,3 +125,6 @@ proj.win10/.vs*
 *cmake_install.cmake
 *Makefile
 lib/
+
+# Log files
+*.log
