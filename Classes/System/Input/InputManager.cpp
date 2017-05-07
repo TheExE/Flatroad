@@ -17,27 +17,30 @@ bool InputManager::init(Node* pInputLayer, HelloWorld* pGame)
 	m_pGame = pGame;
 
 	// Set up input listeners
-	auto toucheListener = EventListenerTouchOneByOne::create();
+
+		// Create the listener objects
 	auto mouseListener = EventListenerMouse::create();
 	auto keyBoardListener = EventListenerKeyboard::create();
-	toucheListener->onTouchEnded = CC_CALLBACK_2(InputManager::onTouchEnded, this);
+
+		// Assign callbacks
 	mouseListener->onMouseDown = CC_CALLBACK_1(InputManager::onMouseDown, this);
-	keyBoardListener->onKeyPressed = CC_CALLBACK_2(InputManager::onKeyboardDown, this);
-	pInputLayer->getEventDispatcher()->addEventListenerWithSceneGraphPriority(mouseListener, m_pInputLayer);
+	keyBoardListener->onKeyReleased = CC_CALLBACK_1(InputManager::onKeyboardDown, this);
+
+		// Add listeners to listening list
+	pInputLayer->getEventDispatcher()->addEventListenerWithSceneGraphPriority(mouseListener,
+		m_pInputLayer);
+	pInputLayer->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyBoardListener,
+		m_pInputLayer);
+
 
 	return true;
 }
 
-void InputManager::onMouseDown(Event* event)
+void InputManager::onMouseDown(Event* event) const
 {
-	m_pGame->receiveInput(((EventMouse*)event)->getLocation());
+	m_pGame->receiveMomentInput(((EventMouse*)event)->getLocation());
 }
-
-void InputManager::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+void InputManager::onKeyboardDown(EventKeyboard::KeyCode keyCode) const
 {
-	m_pGame->receiveInput(touch->getLocation());
-}
-void InputManager::onKeyboardDown(EventKeyboard::KeyCode keyCode, Event* event)
-{
-	
+	m_pGame->receivedKeyboardInput(keyCode);
 }

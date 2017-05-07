@@ -8,6 +8,7 @@
 #include "UI/CharacterHUD.h"
 #include "Entities/Enemy/Enemy.h"
 #include <System/Utils/Utils.h>
+#include "UI/SkillPlacmentHUD.h"
 //#include <network\WebSocket.h>
 
 
@@ -118,10 +119,10 @@ bool HelloWorld::init()
 
 void HelloWorld::update(float deltaTime) 
 {
-	//m_pEnemy->update(deltaTime);
+	m_pEnemy->update(deltaTime);
 }
 
-void HelloWorld::receiveInput(cocos2d::Vec2 screenPosInput)
+void HelloWorld::receiveMomentInput(cocos2d::Vec2 screenPosInput)
 {
 	// Cauculate move speed
 	Vec2 clickInWorld = screenPositionToWorldPosition(screenPosInput);
@@ -139,21 +140,59 @@ Node* HelloWorld::getRootNode()
 {
 	return m_pRootNode;
 }
-Vec2 HelloWorld::screenPositionToWorldPosition(cocos2d::Vec2 screenPosition)
+Vec2 HelloWorld::screenPositionToWorldPosition(cocos2d::Vec2 screenPosition) const
 {
 	Vec2 playerCharPos = m_pWizardChar->getPosition();
 	return Vec2(playerCharPos.x + (screenPosition.x - (SCREEN_WIDTH / 2)),
 		playerCharPos.y + ((screenPosition.y - (SCREEN_HEIGHT / 2)) * (-1)));
 }
-void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode)
+void HelloWorld::receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode)
 {
+	SpellType spellType = None;
+
+	// Find out which spell we need to cast
 	switch (keyCode)
 	{
 	case EventKeyboard::KeyCode::KEY_1:
-			
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_1);
+			break;
+
+	case EventKeyboard::KeyCode::KEY_2:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_2);
+		break;
+
+	case EventKeyboard::KeyCode::KEY_3:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_3);
+		break;
+
+	case EventKeyboard::KeyCode::KEY_4:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_4);
+		break;
+
+	case EventKeyboard::KeyCode::KEY_5:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_5);
+		break;
+
+	case EventKeyboard::KeyCode::KEY_6:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_6);
+		break;
+
+	case EventKeyboard::KeyCode::KEY_7:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_7);
+		break;
+
+	case EventKeyboard::KeyCode::KEY_8:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_8);
+		break;
+
+	case EventKeyboard::KeyCode::KEY_9:
+		spellType = m_pCharacterHUD->getSpellTypeFromPlacementPos(Position_9);
 		break;
 
 	default:
 		break;
 	}
+
+	// cast the spell
+	m_pWizardChar->onShootSpell(Vec2::ANCHOR_TOP_LEFT, spellType);
 }

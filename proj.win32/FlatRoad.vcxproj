@@ -159,6 +159,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\System\Libs\tinyxml2.cpp" />
     <ClCompile Include="..\Classes\System\Utils\Utils.cpp" />
     <ClCompile Include="..\Classes\UI\CharacterHUD.cpp" />
+    <ClCompile Include="..\Classes\UI\MappedSkill.cpp" />
     <ClCompile Include="..\Classes\UI\SkillPlacementHUD.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -166,6 +167,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\GameStandart.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\UI\MappedSkill.h" />
     <ClInclude Include="..\Classes\UI\SkillPlacmentHUD.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

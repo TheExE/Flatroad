@@ -28,7 +28,7 @@ public:
 	void initSceneUI();
 	Node* getRootNode();
 	void addEventListenerWithSceneGraphPriority(cocos2d::EventListener* listener);
-	void receiveInput(cocos2d::Vec2 screenPosInput);
+	void receiveMomentInput(cocos2d::Vec2 screenPosInput);
 	void receivedKeyboardInput(cocos2d::EventKeyboard::KeyCode keyCode);
 
 private:
@@ -41,7 +41,7 @@ private:
 	
 
 private:
-	cocos2d::Vec2 screenPositionToWorldPosition(cocos2d::Vec2 screenPosition);
+	cocos2d::Vec2 screenPositionToWorldPosition(cocos2d::Vec2 screenPosition) const;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

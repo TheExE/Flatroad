@@ -99,6 +99,9 @@
     <ClCompile Include="..\Classes\UI\SkillPlacementHUD.cpp">
       <Filter>src\UI\InGame\HUD</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\UI\MappedSkill.cpp">
+      <Filter>src\UI\InGame\HUD</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\GameStandart.h">
       <Filter>src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\MappedSkill.h">
+      <Filter>src\UI\InGame\HUD</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

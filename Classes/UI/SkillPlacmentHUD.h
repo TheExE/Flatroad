@@ -16,12 +16,16 @@ enum SkillPlacementPosition
 	Position_9,
 };
 
+enum SpellType;
+class MappedSkill;
+
 class SkillPlacementHUD: public cocos2d::Layer
 {
 public:
+	~SkillPlacementHUD();
 	static SkillPlacementHUD* create(tinyxml2::XMLNode* pData);
-	void setSkill(cocos2d::Sprite* pSkillSprite, SkillPlacementPosition pos);
-	
+	void setSkill(cocos2d::Sprite* pSkillSprite, SkillPlacementPosition pos, SpellType spellType);
+	SpellType getSpellTypeFromPlacementPos(SkillPlacementPosition pos);
 	
 	void setHUDBackground(cocos2d::Sprite* pBg);
 	void setCellBackground(cocos2d::Sprite* pCellBg);
@@ -31,7 +35,7 @@ public:
 private:
 	cocos2d::Sprite* m_pBackground;
 	cocos2d::Sprite* m_pCellBackground;
-	std::vector<cocos2d::Sprite*> m_MapedSkills;
+	std::vector<MappedSkill*> m_MapedSkills;
 
 private:
 	SkillPlacementHUD();

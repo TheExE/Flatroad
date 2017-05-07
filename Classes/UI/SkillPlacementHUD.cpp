@@ -1,13 +1,25 @@
 #include "UI/SkillPlacmentHUD.h"
 #include "GameStandart.h"
 #include <System/Utils/Utils.h>
+#include "MappedSkill.h"
+#include "Entities/Skills/SpellType.h"
 
 using namespace cocos2d;
 
 SkillPlacementHUD::SkillPlacementHUD()
 {
-	
+	m_pCellBackground = nullptr;
+	m_pBackground = nullptr;
 }
+SkillPlacementHUD::~SkillPlacementHUD()
+{
+	// Release taken memory
+	for(auto i = m_MapedSkills.begin(); i < m_MapedSkills.end(); ++i)
+	{
+		delete (*i);
+	}
+}
+
 SkillPlacementHUD* SkillPlacementHUD::create(tinyxml2::XMLNode* pData)
 {
 	tinyxml2::XMLNode* pSkillPlacementXML = pData->FirstChildElement(XML_SKILLPLACEMENT);
@@ -33,6 +45,12 @@ SkillPlacementHUD* SkillPlacementHUD::create(tinyxml2::XMLNode* pData)
 		 *  lets place HUD elements into the layer
 		*/
 
+		/* 
+		 * For purpose of not making unnecessary allocations, reserve all possible skill slots
+		 * at begining.
+		*/
+		hud->m_MapedSkills.reserve(MAX_SKILL_IN_HUD);
+
 		// Set up the hud background
 		hudBg->setContentSize(Size(SCREEN_WIDTH, SCREEN_HEIGHT/10));
 		hudBg->setAnchorPoint(Vec2(0, 0));
@@ -44,6 +62,9 @@ SkillPlacementHUD* SkillPlacementHUD::create(tinyxml2::XMLNode* pData)
 		hudCellBg->setAnchorPoint(Vec2(0, 0));
 		hudCellBg->setPosition(SCALE* 40, SCALE);
 		hudBg->addChild(hudCellBg);
+		
+		// Add this hud cell to mapped skills
+		hud->m_MapedSkills.push_back(new MappedSkill(hudCellBg, None));
 
 		// Add all other hud cells
 		Vec2 curPos = hudCellBg->getPosition();
@@ -56,6 +77,7 @@ SkillPlacementHUD* SkillPlacementHUD::create(tinyxml2::XMLNode* pData)
 			pCurSprite->setAnchorPoint(Vec2(0, 0));
 			pCurSprite->setPosition(curPos);
 			hudBg->addChild(pCurSprite);
+			hud->m_MapedSkills.push_back(new MappedSkill(pCurSprite, None));
 		}
 
 		// Add to the layer
@@ -65,6 +87,11 @@ SkillPlacementHUD* SkillPlacementHUD::create(tinyxml2::XMLNode* pData)
 	{
 		CC_SAFE_DELETE(hud);
 	}
+
+	// TODO: Remove this test
+	// Test Skill HUD
+	Sprite* skillImg = Sprite::create("res/Assets/Graphics/Skills/Spells/fireBolt.png");
+	hud->setSkill(skillImg, Position_1, FireBolt);
 
 	return hud;
 }
@@ -85,4 +112,12 @@ Sprite* SkillPlacementHUD::getHUDBackground() const
 Sprite* SkillPlacementHUD::getCellBackground() const
 {
 	return m_pCellBackground;
+}
+void SkillPlacementHUD::setSkill(Sprite* pSkillSprite, SkillPlacementPosition pos, SpellType spellType)
+{
+	m_MapedSkills[pos]->setSpell(pSkillSprite, spellType);
+}
+SpellType SkillPlacementHUD::getSpellTypeFromPlacementPos(SkillPlacementPosition pos)
+{
+	return m_MapedSkills.at(pos)->getSpellType();
 }

@@ -8,9 +8,15 @@
 using namespace cocos2d;
 
 Enemy::Enemy()
+:	m_Level(0), 
+	m_Health(0), 
+	m_MoveSpeed(0), 
+	m_ActiveRadius(0), 
+	m_DamageDealt(0)
 {
 	m_pStateMachine = nullptr;
 }
+
 Enemy::~Enemy()
 {
 
@@ -34,12 +40,11 @@ bool Enemy::init(const char* pathToXML)
 	m_SpellList.at(0)->init(FireBolt, pSpellSprite, 50, 100);
 
 	return m_pStateMachine->init(this) && success;
-	return success;
 }
 
 void Enemy::update(float deltaTime)
 {
-	//m_pStateMachine->update(deltaTime);
+	m_pStateMachine->update(deltaTime);
 }
 float Enemy::getActiveRadius() const
 {

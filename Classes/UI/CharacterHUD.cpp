@@ -3,6 +3,7 @@
 #include "System/Libs/tinyxml2.h"
 #include "System/Utils/Utils.h"
 #include "SkillPlacmentHUD.h"
+#include <Entities/Skills/SpellType.h>
 
 using namespace cocos2d;
 
@@ -35,14 +36,14 @@ bool CharacterHUD::init(const char* pathToXML, Node* pRootNode, Node* pUINode)
 	pRootNode->addChild(m_pCurMoveTarget);
 
 	//--- Init Skill placement HUD
-	SkillPlacementHUD* skillHUD = SkillPlacementHUD::create(pData);
-	if(skillHUD == nullptr)
+	m_pSkillPlacementHUD = SkillPlacementHUD::create(pData);
+	if(m_pSkillPlacementHUD == nullptr)
 	{
 		cocos2d::log("CharacterHUD: Failed to initialize SkillPlacementHUD !");
 	}
 	else
 	{
-		pUINode->addChild(skillHUD);
+		pUINode->addChild(m_pSkillPlacementHUD);
 	}
 	pRootNode->addChild(pUINode);
 	m_pUINode = pUINode;
@@ -82,13 +83,10 @@ void CharacterHUD::onCharacterReachedWayPoint()
 {
 	m_pCurMoveTarget->setVisible(false);
 }
-
+SpellType CharacterHUD::getSpellTypeFromPlacementPos(SkillPlacementPosition pos)
+{
+	return m_pSkillPlacementHUD->getSpellTypeFromPlacementPos(pos);
+}
 void CharacterHUD::update(float deltaTime)
 {
-	// updates all UI elements to camera space
-/*	for (int i = 0; i < m_UINodes.Lenght(); i++)
-	{
-		Vec3 curPosition = mUINodes[i]->getPosition();
-		m_UINodes[i]->setPosition(m_DefaultCamera->getPosition() - curPosition);
-	}*/
 }

@@ -149,6 +149,7 @@ void Character::onCharacterMoveFinished()
 // Called when player presses keyboard button for  specific spell
 void Character::onShootSpell(Vec2 direction, SpellType spellType)
 {
+	// Find the spell from avaible spells 
 	for(unsigned int i = 0; i < mAvailableSpells.size(); i++)
 	{
 		Spell* currentSpell = mAvailableSpells[i];
