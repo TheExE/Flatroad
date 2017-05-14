@@ -82,16 +82,15 @@ SkillPlacementHUD* SkillPlacementHUD::create(tinyxml2::XMLNode* pData)
 
 		// Add to the layer
 		hud->addChild(hudBg);
+		// TODO: Remove this test
+		// Test Skill HUD
+		Sprite* skillImg = Sprite::create("res/Assets/Graphics/Skills/Spells/fireBolt.png");
+		hud->setSkill(skillImg, Position_1, FireBolt);
 	}
 	else
 	{
 		CC_SAFE_DELETE(hud);
 	}
-
-	// TODO: Remove this test
-	// Test Skill HUD
-	Sprite* skillImg = Sprite::create("res/Assets/Graphics/Skills/Spells/fireBolt.png");
-	hud->setSkill(skillImg, Position_1, FireBolt);
 
 	return hud;
 }

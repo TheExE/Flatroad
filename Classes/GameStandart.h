@@ -28,7 +28,7 @@ static const int Z_ORDER_WAYPOINT = -1;
 static const int MOVE_ACTION_TAG = 1;
 static const int WALK_ANIM_TAG = 2;
 static const int MOVE_TARGET_ACTION_TAG = 3;
-static const int MOVE_UI_ACTION_TAG = 4;
+static const int MOVE_UI_ACTION_TAG = 4; 
 
 // XML KEYWORDS
 

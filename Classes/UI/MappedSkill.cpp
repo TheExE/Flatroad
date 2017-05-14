@@ -25,4 +25,7 @@ void MappedSkill::setSpell(Sprite* pSpellSprite, SpellType spellType)
 {
 	m_SpellType = spellType;
 	m_pSpellSprite = pSpellSprite;
+	m_pCellBg->addChild(pSpellSprite);
+	Size cellSize = m_pCellBg->getContentSize();
+	m_pSpellSprite->setPosition(cellSize.width / 2, cellSize.height / 2);
 }

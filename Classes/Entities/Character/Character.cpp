@@ -6,6 +6,10 @@
 
 using namespace cocos2d;
 
+Character::~Character()
+{
+}
+
 bool Character::init(const char* pathToXML)
 {
 	initGraphics(pathToXML);
@@ -82,7 +86,7 @@ void Character::initGraphics(const char* pathToXML)
 	}
 }
 
-void Character::onStartMoving(cocos2d::Vec2 clickInWorld, float timeToMove)
+void Character::onStartMoving(Vec2 clickInWorld, float timeToMove)
 {
 	Vec2 forward(0, 1);
 	Vec2 toClickInWorldPos = clickInWorld - getPosition();
@@ -112,10 +116,10 @@ void Character::onStartMoving(cocos2d::Vec2 clickInWorld, float timeToMove)
 	// Move character and call function once movement is finished
 	FiniteTimeAction* move = MoveTo::create(timeToMove, clickInWorld);
 	auto moveCallBack = CallFuncN::create(CC_CALLBACK_0(Character::onCharacterMoveFinished, this));
-	cocos2d::Vector<FiniteTimeAction*> allActions;
+	Vector<FiniteTimeAction*> allActions;
 	allActions.pushBack(move);
 	allActions.pushBack(moveCallBack);
-	Sequence* sequence = cocos2d::Sequence::create(allActions);
+	Sequence* sequence = Sequence::create(allActions);
 	sequence->setTag(MOVE_ACTION_TAG);
 
 	// First we stop any already runing actions
@@ -152,10 +156,16 @@ void Character::onShootSpell(Vec2 direction, SpellType spellType)
 	// Find the spell from avaible spells 
 	for(unsigned int i = 0; i < mAvailableSpells.size(); i++)
 	{
-		Spell* currentSpell = mAvailableSpells[i];
+		Spell* currentSpell = mAvailableSpells.at(i);
 		if(currentSpell->GetType() == spellType)
 		{
-			currentSpell->cast(this->getPosition(), Utils::getSpriteHeading(this));
+			/*
+			 * We need to set spell position to middle of the character.
+			 * Since spell is addded to characters own layer middle
+			 * is located in half width, height of the character
+			 */
+			Size characterSize = getContentSize();
+			currentSpell->cast(Vec2(characterSize.width/2, characterSize.height/2), Utils::getSpriteHeading(this));
 			break;
 		}
 	}
@@ -188,8 +198,10 @@ void Character::addSpellElementToAvailableSpells(tinyxml2::XMLNode* pSpellNode)
 		std::string spellRangeStr = pSpellNode->
 			FirstChildElement(XML_RANGE)->FirstChild()->ToText()->Value();
 
+		Spell* s = Spell::create(this, curSpellType, particle,
+			stof(spellDmgStr), stof(spellRangeStr));
+
 		// Add Spell to available spells
-		mAvailableSpells.push_back(Spell::create(curSpellType, particle,
-			stof(spellDmgStr), stof(spellRangeStr)));
+		mAvailableSpells.push_back(s);
 	}
 }

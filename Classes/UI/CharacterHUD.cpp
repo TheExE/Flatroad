@@ -53,7 +53,6 @@ bool CharacterHUD::init(const char* pathToXML, Node* pRootNode, Node* pUINode)
 
 void CharacterHUD::onMouseDown(cocos2d::Vec2 worldPosition, float delayTime)
 {
-	
 	// Setting up move point on map
 	m_pCurMoveTarget->setPosition(worldPosition);
 	m_pCurMoveTarget->setVisible(true);

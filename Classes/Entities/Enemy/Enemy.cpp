@@ -37,7 +37,7 @@ bool Enemy::init(const char* pathToXML)
 	 * enemy sprite will be affected by speel changes to its sprite. POINTERS !
 	*/
 	Sprite* pSpellSprite = Sprite::createWithTexture(getTexture());
-	m_SpellList.at(0)->init(FireBolt, pSpellSprite, 50, 100);
+	m_SpellList.at(0)->init(this, FireBolt, pSpellSprite, 50, 100);
 
 	return m_pStateMachine->init(this) && success;
 }

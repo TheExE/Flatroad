@@ -13,6 +13,7 @@ class Spell;
 class Character: public cocos2d::Sprite
 {
 public:
+	~Character();
 	bool init(const char* pathToXML);
 	void onStartMoving(cocos2d::Vec2 clickScreenPos, float timeToMove);
 	void onShootSpell(cocos2d::Vec2 direction, SpellType spellType);
@@ -27,5 +28,4 @@ private:
 	void initGraphics(const char* pathToXML);
 	void onCharacterMoveFinished();	
 	void addSpellElementToAvailableSpells(tinyxml2::XMLNode* pSpellNode);
-
 };
